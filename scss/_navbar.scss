@@ -1,0 +1,218 @@
+/* navbar.scss start */
+$primary-color: #8e3330;
+.navbar {
+	// position: relative;
+	position: sticky;
+	background-color: #fff;
+	top: -24px;
+	z-index: 1000;
+	padding-bottom: 24px;
+	padding-top: 24px;
+	margin-bottom: 24px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	overscroll-behavior: none;
+}
+.navbar nav {
+	display: flex;
+	// padding-top: 24px;
+}
+.navLeft,
+.navRight {
+	flex: 0 50%;
+}
+.navCenter {
+	flex: 0 auto;
+	.logo {
+		display: block;
+		background: url(../images/logo.png) center / contain no-repeat;
+		aspect-ratio: 111/160;
+		margin: 0 28px;
+		height: 80px;
+	}
+}
+
+.navLeft .navList {
+	justify-content: flex-end;
+}
+//選單橫排，hover底線
+.navList {
+	display: flex;
+	.navLink {
+		display: block;
+		padding: 0 30px;
+		// padding: 0 3.55vw;
+		@include pc {
+			padding: 0 20px;
+		}
+		line-height: 80px;
+	}
+	.navLink span {
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -0.1em;
+			height: 0;
+			right: -1ch;
+			left: -1ch;
+			background-color: darkorange;
+		}
+	}
+	.navLink:hover span::after {
+		content: "";
+		height: 0.25em;
+		transition: height 0.3s ease-in-out;
+	}
+}
+.navbar .hamburger {
+	display: none;
+}
+.navbar .socialIcon {
+	display: flex;
+	position: absolute;
+	right: 6%;
+	top: 50%;
+	transform: translateY(-50%);
+	@include pad{
+		top: unset;
+		bottom: 0;
+		transform: none;
+	}
+}
+@mixin hamburger($width: var(--box-width), $dashH: var(--dash-height)) {
+	--box-width: 50px;
+	--dash-width: 80%;
+	--dash-height: 4%;
+
+	width: $width;
+	height: $width;
+	// border: 1px solid #000;
+	position: absolute;
+	right: 6%;
+	top: 24px;
+	z-index: 2;
+	text-align: center;
+	@include pad{
+		width: 5em;
+		span{
+			width: 100% !important;
+		}
+	}
+	span {
+		width: unquote("min( var(--dash-width), 100%)");
+		height: unquote("min( var(--dash-height), 33%)");
+		background-color: #000;
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		transition: transform 0.3s, inset 0.3s 0.3s;
+		&:nth-of-type(1) {
+			bottom: 48%;
+		}
+		&:nth-of-type(3) {
+			top: 48%;
+		}
+	}
+}
+@mixin hamburger-active{
+	position: fixed;
+	span {
+		transition: background-color 0.3s, inset 0.3s, opacity 0.6s, transform 0.3s 0.3s;
+		background-color: white;
+		&:nth-of-type(1) {
+			inset: 0;
+			transform: rotate(45deg);
+		}
+		&:nth-of-type(2) {
+			opacity: 0;
+		}
+		&:nth-of-type(3) {
+			inset: 0;
+			transform: rotate(-45deg);
+		}
+	}
+}
+@include pad {
+	.navbar nav {
+		justify-content: center;
+	}
+	.navRight,
+	.navLeft {
+		display: none;
+	}
+	.navbar.active {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		position: fixed;
+		inset: 0;
+		overflow-y: auto;
+		background-color: #8e3330;
+		z-index: 50;
+		min-height: 100vh;
+		// padding-bottom: 60px;
+		.socialIcon {
+			justify-content: center;
+			position: static;
+			transform: none;
+			color: white;
+			// margin: 0 auto;
+			> * + *{
+				margin-left: .5em;
+			}
+		}
+		nav {
+			// display: none;
+			flex-wrap: wrap;
+		}
+		.navLeft,
+		.navRight {
+			flex: 100%;
+			display: block;
+		}
+		.navCenter {
+			order: -1;
+		}
+		.logo {
+			margin: 5vh auto;
+			// margin-left: auto;
+			// margin-right: auto;
+			background-image: url(../images/nav_logo.png);
+		}
+		.navList {
+			// flex-wrap: wrap;
+			display: block;
+		}
+		.navLink {
+			text-align: center;
+			color: white;
+			letter-spacing: 0.1em;
+			padding: 2vh 0;
+		}
+	}
+	.navbar .hamburger {
+		display: block;
+		@include hamburger;
+	}
+
+	.navbar.active .hamburger  {
+		@include hamburger-active;
+	}
+
+
+}
+.toTop {
+	position: fixed;
+	bottom: 0;
+	right: 20px;
+	color: #8e3330;
+	border: 2px solid #8e3330;
+	border-radius: 50%;
+	padding: 2em;
+}
+// remove all scrollbar
+body.noScrollBar::-webkit-scrollbar {
+	// display: none;
+}
+/* navbar.scss end */

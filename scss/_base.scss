@@ -1,0 +1,48 @@
+/* base.scss start */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+html {
+	// scroll-behavior: smooth;
+}
+body {
+	font-family: "微軟正黑體";
+}
+.cntr {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h2 {
+	margin-bottom: 24px;
+	color: #8e3330;
+	line-height: 1.2;
+	font-size: $h2-size;
+	position: relative;
+}
+h2::after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateY(-50%);
+	width: 100px;
+	margin-left: 2ch;
+	border-bottom: 4px dashed #000;
+}
+// h2.verticalLine:after{
+// 	border-left: 4px dashed #000;
+// 	border-bottom: none;
+// 	transform: translateX(50%);
+// }
+*{
+	outline: 1px solid black;
+}
+/* base.scss end */

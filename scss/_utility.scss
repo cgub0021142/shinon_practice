@@ -1,0 +1,16 @@
+@each $bp-key, $bp-val in $grid-breakpoint {
+	@media (max-width: $bp-val) {
+		@each $display-val in $display {
+			.d-#{$bp-key}#{$display-val} {
+				display: $display-val;
+			}
+		}
+	}
+}
+@each $bp-key, $bp-val in $grid-breakpoint {
+	@media (max-width: $bp-val) {
+		.ta-#{$bp-key}c {
+			text-align: center;
+		}
+	}
+}

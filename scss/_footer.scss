@@ -1,0 +1,13 @@
+.siteFooter {
+	background-color: #f8f8f8;
+	.copyright {
+		padding: 48px 0 55px;
+		letter-spacing: 0.15em;
+		text-align: center;
+		font-size: 0.875rem;
+		@include phone {
+			padding: 0 0 16vw;
+			font-size: (8vw/3);
+		}
+	}
+}

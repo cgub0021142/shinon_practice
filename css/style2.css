@@ -1,0 +1,281 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "微軟正黑體";
+}
+.cntr {
+    max-width: 960px;
+    margin-left: auto; margin-right: auto;
+}
+h2 {
+    margin-bottom: 24px;
+    color: #8e3330;
+}
+h2::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    margin-left: 2ch;
+    border-bottom: 2px dashed #000;
+}
+.mySwiper1 {
+    max-width: 1130px;
+    width: 88.28125%;
+    margin: 0 auto min(10vw, 80px);
+}
+
+.swiper-slide img {
+    max-width: 100%;
+}
+section.slogan {
+    width: 200px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 65px;
+    background: url(../images/slogan.svg) no-repeat center/100%;
+}
+/* news section */
+.news {
+    margin-bottom: 128px;
+}
+.news .cardCntr {
+    display: flex;
+    margin-bottom: 48px;
+    margin: 0 -15px 48px;
+    justify-content: space-between;
+}
+.news .card {
+    flex: 0 300px;
+    /* margin-right: auto; */
+    /* margin: 0 10px; */
+    padding: 0 15px;
+}
+.news .cardImg {
+    aspect-ratio: 300/200;
+    width: 300px;
+    width: 100%;
+    background: url("https://fakeimg.pl/300x200/ff3") center/cover no-repeat;
+    margin-bottom: 24px;
+}
+.news .cardBody {
+    padding-right: 2ch;
+}
+.news .cardTitle {
+    margin-bottom: 8px;
+}
+.news .cardSubTitle span:not(:first-of-type)::before {
+    content: " | ";
+}
+.allNews {
+    text-align: right;
+    margin-bottom: 2.5em;
+}
+.allNews span {
+    border-bottom: 1px dotted #000;
+    position: relative;
+}
+
+/* concept  */
+.concept {
+    margin-bottom: 160px; 
+}
+.concept .banner {
+    display: flex;
+    margin-bottom: 108px;
+}
+.conceptImg {
+    flex: 0 80%;
+    max-width: 860px;
+    aspect-ratio: 850/520;
+    background: url("../images/conceptImg.png") center/cover no-repeat;
+    border-radius: 8px;
+}
+.concept .slogan {
+    flex: 0 1 120px;
+    margin-left: auto;
+    text-align: center;
+}
+.concept .slogan h2 {
+    display: inline-block;
+    padding-top: 185px;
+}
+.concept .slogan h2::after {
+    content: "";
+    display: block;
+    height: 3.5em;
+    margin: 0;
+    margin-top: 1ch;
+    border-right: 2px dashed black;
+    border-bottom: none;
+    width: 50% !important;
+}
+.concept .conceptBody {
+    display: flex;
+}
+.concept .content {
+    flex: 0 42%;
+}
+.concept .content h3 {
+    color: #8e3330;
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    line-height: 2;
+    letter-spacing: 0.8ch;
+}
+.concept .content p {
+    font-size: 14px;
+    letter-spacing: 2.52px;
+    line-height: 38px;
+}
+.concept .caption {
+    flex: auto;
+    position: relative;
+}
+.concept .caption .img1 {
+    background: url("../images/conceptCap1.png") center / cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 50%;
+    aspect-ratio: 4/3;
+    z-index: 1;
+    border-radius: 8px;
+}
+.concept .caption .img2 {
+    background: url("../images/conceptCap2.png") center / cover no-repeat;
+    position: absolute;
+    top: 48px;
+    right: 2%;
+    width: 70%;
+    aspect-ratio: 300/215;
+}
+
+/* shopInfo  */
+.shopInfo {
+    background-color: #f8f8f8;
+    padding: 100px 0 80px;
+}
+.shopInfoWrapper {
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.shopInfo .content {
+    width: 30%;
+}
+.shopInfo .content h2 {
+    margin-bottom: 24px;
+}
+.shopInfo .content .logo {
+    background: url("../images/logo.png") center/cover no-repeat;
+    aspect-ratio: 111/160;
+    height: 80px;
+}
+.shopInfo .content .shopName {
+    margin: 16px 0;
+}
+.shopInfo .content .shopAddr {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.shopInfoTable {
+    overflow: hidden;
+}
+.shopInfoTable {
+    display: flex;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.shopInfoTable .itemName {
+    width: 40%;
+    margin-right: 5%;
+}
+.shopInfoTable .itemVal {
+    width: 55%;
+}
+.shopInfo .shopCaption {
+    width: 70%;
+}
+.shopCaption .captionSlide.cap1 {
+    background: url("../images/shopCaption1.png") center/cover no-repeat;
+    aspect-ratio: 65/45;
+}
+.shopCaption .captionSlide.cap2 {
+    background: url("../images/shopCaption2.png") center/cover no-repeat;
+    aspect-ratio: 65/45;
+}
+.shopCaption .captionSlide.cap3 {
+    background: url("../images/shopCaption3.png") center/cover no-repeat;
+    aspect-ratio: 65/45;
+}
+.shopCaption .captionSlide.cap4 {
+    background: url("../images/shopCaption4.png") center/cover no-repeat;
+    aspect-ratio: 65/45;
+}
+.shopCaption .capPagination {
+    box-sizing: border-box;
+    padding-right: 2ch;
+    text-align: right;
+    width: auto !important;
+    right: 0;
+    /* transform: scale(2); */
+    font-size: 1.5rem;
+}
+.shopCaption .capPagination > .swiper-pagination-bullet {
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em !important;
+    background-color: #8e3330;
+    border: 3px solid white;
+}
+.accessWrapper {
+}
+.accessWrapper h2 {
+    margin-bottom: 24px;
+}
+.accessWrapper iframe {
+    width: 100%;
+    aspect-ratio: 2/1;
+    margin-bottom: 72px;
+}
+.accessBtnGroup {
+    display: flex;
+    justify-content: center;
+}
+.accessBtnGroup a:first-of-type {
+    margin-right: 5%;
+}
+.accessBtnGroup a {
+    flex: 0 20%;
+    white-space: nowrap;
+    padding: 0.8em;
+    border-radius: 8px;
+    background-color: #8e3330;
+    color: white;
+}
+.accessBtnGroup a i {
+    border-radius: 50%;
+    margin-right: 0.5ch;
+    padding: 0.5em;
+    background: white;
+    color: #8e3330;
+    /* line-height: 2; */
+}
+.accessWrapper p {
+    text-align: center;
+    margin: 16px 0;
+    letter-spacing: 2px;
+}

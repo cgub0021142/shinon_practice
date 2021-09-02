@@ -1,0 +1,33 @@
+$columns: 12;
+// @import "mediaQuery";
+.row {
+	display: flex;
+}
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		flex: 0 0 (100% / $columns * $i);
+	}
+}
+@for $i from 1 through $columns {
+	.col-offset-#{$i} {
+		margin-left: 100% / $columns * $i;
+	}
+}
+@each $bp-key, $bp-val in $grid-breakpoint {
+	@media (max-width: $bp-val) {
+		@for $i from 1 through $columns {
+			.col-#{$bp-key}#{$i} {
+				flex: 0 0 (100%/12 * $i);
+			}
+		}
+	}
+}
+@each $bp-key, $bp-val in $grid-breakpoint {
+	@media (max-width: $bp-val) {
+		@for $i from 1 through $columns {
+			.col-offset-#{$bp-key}#{$i} {
+				margin-left: (100%/12 * $i);
+			}
+		}
+	}
+}

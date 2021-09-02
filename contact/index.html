@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
+        integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
+        crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="cntr">
+          <div class="navLeft">
+            <ul class="navList">
+              <li class="navItem"> <a href="/index.html#news" class="navLink"><span>NEWS</span></a></li>
+              <li class="navItem"> <a href="/index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
+              <li class="navItem"> <a href="#!" class="navLink"><span>MENU</span></a></li>
+            </ul>
+          </div>
+          <div class="navCenter"><a href="/" class="logo"></a></div>
+          <div class="navRight">
+            <ul class="navList">
+              <li class="navItem"><a href="/index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
+              <li class="navItem"><a href="/contact" class="navLink"><span>CONTACT</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <section class="contact cntr">
+        <h2>contact</h2>
+        <form action="" class="contactForm">
+            <div class="title">
+                <div class="note">
+                    当日〜翌々日までのご予約は，お電話にて承ります。
+                </div>
+                <div class="contact-btn"><i class="fas fa-phone"></i>072-723-8858</div>
+            </div>
+            <div class="customerInfo">
+                <label for="name"><span class="required">*</span>お名前
+                    <input type="text" name="name" id="name">
+                </label>
+                <label for="name1"><span class="required">*</span>フリガナ
+                    <input type="text" name="name1" id="name1"></label>
+                <label for="tel">
+                    <span class="required">*</span>
+                    お電話番号
+                    <input type="text" name="tel" id="tel">
+                </label>
+                <label for="email">
+                    <span class="required">*</span>email
+                    <input type="text" name="email" id="email">
+                </label>
+                <label for="emailRetype">
+                    <span class="required">*</span>
+                    email retype
+                    <input type="text" name="emailRetype" id="emailRetype">
+                </label>
+            </div>
+            <input type="checkbox" name="check1" id="check1">
+            <label for="check1" class="dropdown">ご予約のお客様はこちら</label>
+            <div class="reservation">
+                <h3>ご注文メニュー</h3>
+                <div class="menu">
+                    <div class="menuItem">
+                        <h4>SHINONセット</h4>
+                        <p>詰め合わせ（特製ローストビーフ入り）、大人1名様用</p>
+                        <div class="orderItem">
+                            <div class="dish">ご飯なし</div>
+                            <div class="price">￥1,200-</div>
+                            <div class="cnt">注文数
+                                <select name="" id="">
+                                    <option value="">最多三個</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message"></div>
+            <div class="confirmation"></div>
+        </form>
+
+    </section>
+    <script>
+        $(function () {
+            $('#check1').click(function () {
+                $('.reservation').slideToggle(300);
+            })
+        })
+    </script>
+</body>
+
+</html>

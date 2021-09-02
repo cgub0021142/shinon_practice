@@ -1,0 +1,15 @@
+@mixin pc {
+	@media (max-width: map-get($map: $grid-breakpoint, $key: lg-)) {
+		@content;
+	}
+}
+@mixin pad {
+	@media (max-width: map-get($map: $grid-breakpoint, $key: md-)) {
+		@content;
+	}
+}
+@mixin phone {
+	@media (max-width: map-get($map: $grid-breakpoint, $key: sm-)) {
+		@content;
+	}
+}
