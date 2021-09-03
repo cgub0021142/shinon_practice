@@ -153,11 +153,14 @@ $primary-color: #8e3330;
 		&::-webkit-scrollbar {
 			display: none;
 		}
+		&.collapse{
+			transform: unset;
+		}
 		position: fixed;
 		inset: 0;
 		overflow-y: auto;
 		background-color: #8e3330;
-		z-index: 50;
+		z-index: 1000;
 		min-height: 100vh;
 		// padding-bottom: 60px;
 		.socialIcon {
