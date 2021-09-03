@@ -35,5 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Change base-tag in index.html from / to shinon_practice
+      - name: Change base-tag in index.html from / to /shinon_practice
         run: sed -i 's/<base href="\/" \/>/<base href="\/shinon_practice\/" \/>/g' release/wwwroot/index.html
