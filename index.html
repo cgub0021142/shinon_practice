@@ -65,7 +65,7 @@
 			let delta = e.deltaY;
 			if (delta > 0)
 				navbar.classList.add('collapse')
-			if(delta<0)
+			if (delta < 0)
 				navbar.classList.remove('collapse')
 
 		}, { passive: true })
@@ -422,11 +422,13 @@
 		$(function () {
 			let headerHight = $('header.navbar').outerHeight();
 			let href = location.hash
-			console.log('href', href)
-			let target = $(href);
-			console.log(target)
-			let position = target.offset().top - headerHight;
-			$("html, body").animate({ scrollTop: position }, 550, "swing");
+			if (href) {
+				console.log('href', href)
+				let target = $(href);
+				console.log(target)
+				let position = target.offset().top - headerHight;
+				$("html, body").animate({ scrollTop: position }, 550, "swing");
+			}
 		})
 		function myScroll(event) {
 			console.log('in')
@@ -442,7 +444,7 @@
 			event.preventDefault()
 			return false;
 		}
-		$("a[href*='#']").click({event}, myScroll);
+		$("a[href*='#']").click({ event }, myScroll);
 	</script>
 </body>
 
