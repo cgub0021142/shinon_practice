@@ -429,14 +429,20 @@ h2::after {
 /* navbar.scss start */
 .navbar {
   position: sticky;
-  background-color: #fff;
   top: -24px;
   z-index: 1000;
+  background-color: #fff;
   padding-bottom: 24px;
   padding-top: 24px;
   margin-bottom: 24px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   overscroll-behavior: none;
+  transition: transform .5s;
+}
+
+.navbar.collapse {
+  transform: translateY(-100%);
+  transition: transform .5s;
 }
 
 .navbar nav {
