@@ -59,7 +59,7 @@
 	</header>
 
 	<script>
-
+		// navbar collapse
 		document.querySelector('html').addEventListener('wheel', function (e) {
 			let navbar = document.querySelector('header.navbar')
 			let delta = e.deltaY;
@@ -73,6 +73,7 @@
 			document.querySelector('header.navbar').classList.toggle('active');
 			document.querySelector('body').classList.toggle('noScrollBar');
 		})
+		//手機模式下，沒有點完，選單要關閉
 		document.querySelectorAll('.navLink').forEach(link => {
 			link.addEventListener('click', function () {
 				let hamburger = document.querySelector('header.navbar')
@@ -426,16 +427,11 @@
 			console.log(target)
 			let position = target.offset().top - headerHight;
 			$("html, body").animate({ scrollTop: position }, 550, "swing");
-			// debugger
-			console.log('debugger')
-
 		})
-		function myScroll(e) {
+		function myScroll(event) {
+			console.log('in')
 			if (location.pathname.replace(/^\//, '') !== this.pathname.replace(/^\//, '') || location.hostname !== this.hostname) return;
 			d = this
-			// console.log(this)
-			// console.log(this.pathname)
-			// console.log(this.hostname)
 			let headerHight = $('header.navbar').outerHeight();
 			let href = $(this).attr("href");
 			console.log('href', href)
@@ -443,10 +439,10 @@
 			console.log(target)
 			let position = target.offset().top - headerHight;
 			$("html, body").animate({ scrollTop: position }, 550, "swing");
-			e.preventDefault()
+			event.preventDefault()
 			return false;
 		}
-		$("a[href*='#']").click(myscroll(e));
+		$("a[href*='#']").click({event}, myScroll);
 	</script>
 </body>
 
