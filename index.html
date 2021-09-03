@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="style/index.css">
 	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="asset/aos/aos.css">
+	<base href="/shinon_practice/">
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
 		integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
 		crossorigin='anonymous'></script>
@@ -32,16 +33,16 @@
 		<nav class="cntr">
 			<div class="navLeft">
 				<ul class="navList">
-					<li class="navItem"> <a href="/index.html#news" class="navLink"><span>NEWS</span></a></li>
-					<li class="navItem"> <a href="/index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
-					<li class="navItem"> <a href="/menu.html" class="navLink"><span>MENU</span></a></li>
+					<li class="navItem"> <a href="index.html#news" class="navLink"><span>NEWS</span></a></li>
+					<li class="navItem"> <a href="index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
+					<li class="navItem"> <a href="menu.html" class="navLink"><span>MENU</span></a></li>
 				</ul>
 			</div>
 			<div class="navCenter"><a href="/" class="logo"></a></div>
 			<div class="navRight">
 				<ul class="navList">
-					<li class="navItem"><a href="/index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
-					<li class="navItem"><a href="/contact" class="navLink"><span>CONTACT</span></a></li>
+					<li class="navItem"><a href="index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
+					<li class="navItem"><a href="contact" class="navLink"><span>CONTACT</span></a></li>
 				</ul>
 			</div>
 		</nav>
@@ -431,9 +432,7 @@
 			}
 		})
 		function myScroll(event) {
-			console.log('in')
 			if (location.pathname.replace(/^\//, '') !== this.pathname.replace(/^\//, '') || location.hostname !== this.hostname) return;
-			d = this
 			let headerHight = $('header.navbar').outerHeight();
 			let href = $(this).attr("href");
 			console.log('href', href)
@@ -441,9 +440,10 @@
 			console.log(target)
 			let position = target.offset().top - headerHight;
 			$("html, body").animate({ scrollTop: position }, 550, "swing");
-			event.preventDefault()
-			return false;
+			// event.preventDefault()
+			// return false;
 		}
+		// $("a[href*='#']").click( {}, myScroll);
 		$("a[href*='#']").click({ event }, myScroll);
 	</script>
 </body>
