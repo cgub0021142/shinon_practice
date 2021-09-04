@@ -678,7 +678,7 @@ h2::after {
 }
 
 .menu-header__img {
-  background: url(images/menu/hero_img.jpg) center/cover;
+  background: url(../images/menu/hero_img.jpg) center/cover no-repeat;
   width: 88.28125%;
   max-width: 1130px;
   height: 450px;

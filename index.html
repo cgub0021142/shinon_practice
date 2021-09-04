@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="style/index.css">
 	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="asset/aos/aos.css">
-	<base href="https://cgub0021142.github.io/shinon_practice/">
+	<!-- <base href="https://cgub0021142.github.io/shinon_practice/"> -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
 		integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
 		crossorigin='anonymous'></script>
@@ -60,15 +60,19 @@
 	</header>
 
 	<script>
-		// navbar collapse
-		document.querySelector('html').addEventListener('wheel', function (e) {
+		// navbar collapse when you scroll down
+		let htmlScrollTop = 0;
+		document.addEventListener('scroll', function (e) {
 			let navbar = document.querySelector('header.navbar')
-			let delta = e.deltaY;
-			if (delta > 0)
+			let nowScrollTop = document.querySelector('html').scrollTop
+			console.log(nowScrollTop)
+			if(nowScrollTop >= htmlScrollTop)
 				navbar.classList.add('collapse')
-			if (delta < 0)
+			else
 				navbar.classList.remove('collapse')
-
+			console.log(htmlScrollTop)
+			htmlScrollTop = nowScrollTop
+			console.log(htmlScrollTop)
 		}, { passive: true })
 		document.querySelector('.hamburger').addEventListener('click', function () {
 			document.querySelector('header.navbar').classList.toggle('active');
@@ -90,16 +94,16 @@
 			<div class="swiper-container mySwiper1">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="./images/main1_pc.jpg" alt="main_slide" class="pc">
-						<img src="./images/main1_sp.jpg" alt="main_slide" class="sp">
+						<img src="images/main1_pc.jpg" alt="main_slide" class="pc">
+						<img src="images/main1_sp.jpg" alt="main_slide" class="sp">
 					</div>
 					<div class="swiper-slide">
-						<img src="./images/main2_pc.jpg" alt="main_slide" class="pc">
-						<img src="./images/main2_sp.jpg" alt="main_slide" class="sp">
+						<img src="images/main2_pc.jpg" alt="main_slide" class="pc">
+						<img src="images/main2_sp.jpg" alt="main_slide" class="sp">
 					</div>
 					<div class="swiper-slide">
-						<img src="./images/main3_pc.jpg" alt="main_slide" class="pc">
-						<img src="./images/main3_sp.jpg" alt="main_slide" class="sp">
+						<img src="images/main3_pc.jpg" alt="main_slide" class="pc">
+						<img src="images/main3_sp.jpg" alt="main_slide" class="sp">
 					</div>
 				</div>
 			</div>
