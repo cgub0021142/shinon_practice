@@ -673,470 +673,59 @@ h2::after {
 }
 
 .cntr {
-  width: 88.28125%;
-  margin: 24px auto min(10vw, 80px);
-}
-
-header .cntr {
-  width: 88.28125%;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-.SwiperPositionParent {
-  padding: 0 50px;
-  position: relative;
-  margin: 0 -50px;
+.banner {
+  margin-bottom: 56px;
 }
 
-.swiper-slide img {
+.bannerImg {
   max-width: 100%;
 }
 
-.swiper-slide img.pc {
-  display: block;
-}
-
-.swiper-slide img.sp {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .swiper-slide img.pc {
-    display: none;
-  }
-  .swiper-slide img.sp {
-    display: block;
-  }
-}
-
-.scroller {
-  writing-mode: vertical-lr;
-  cursor: pointer;
-  position: absolute;
-  z-index: 999;
-  color: black;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 12em;
-}
-
-.scroller .img {
-  background: url(../images/arrow.svg) left top/50% 130% no-repeat;
-  position: absolute;
-  inset: 0;
-  animation: scroll 1.5s infinite;
-  z-index: -1;
-}
-
-.scroller .text {
-  position: absolute;
-  left: 0.5em;
-  white-space: nowrap;
-  letter-spacing: 0.25em;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  75% {
-    transform: translateY(25%);
-  }
-  100% {
-    transform: translateY(25%);
-    opacity: 0;
-  }
-}
-
-section.slogan {
-  width: 200px;
-  aspect-ratio: 1/1;
-  margin: 0 auto 65px;
-}
-
-section.slogan svg {
-  display: block;
-}
-
-/* news section */
-.news {
-  margin-bottom: 128px;
-  overflow: hidden;
-}
-
-.news .cardCntr {
+section.news header {
   display: flex;
-  margin: 0 -15px 16px;
-  flex-wrap: wrap;
-}
-
-.news .cardCntr .card {
-  box-sizing: border-box;
-  padding: 0 15px;
-  margin-bottom: 32px;
-}
-
-.news .cardImg {
-  aspect-ratio: 300/200;
-  width: 300px;
-  width: 100%;
-  background: url("https://fakeimg.pl/300x200/ff3") center/cover no-repeat;
-  margin-bottom: 24px;
-}
-
-.news .cardTitle {
-  margin-bottom: 8px;
-}
-
-.news .cardSubTitle span:not(:first-of-type)::before {
-  content: " | ";
-}
-
-.news .cardSubTitle {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.allNews {
-  text-align: right;
-  margin-bottom: 2.5em;
-}
-
-.allNews span {
-  border-bottom: 1px dotted #000;
-  position: relative;
-}
-
-/* concept  */
-.concept {
-  margin-bottom: 160px;
-}
-
-.concept .banner {
-  margin-bottom: 108px;
-}
-
-@media (max-width: 768px) {
-  .concept .banner {
-    margin-bottom: 0;
-  }
-}
-
-.conceptImg {
-  flex: 0 80%;
-  max-width: 860px;
-  aspect-ratio: 850/520;
-  background: url("../images/conceptImg.png") center/cover no-repeat;
-  border-radius: 8px;
-}
-
-.concept .slogan {
-  flex: 0 1 120px;
-  margin-left: auto;
-  text-align: center;
-}
-
-.concept .slogan h2 {
-  display: block;
-  padding-top: 185px;
-}
-
-@media (max-width: 568px) {
-  .concept .slogan h2 {
-    padding: 0;
-  }
-}
-
-.concept .slogan h2::after {
-  content: "";
-  display: block;
-  margin: 0;
-  margin-top: 1ch;
-  height: 3em;
-  width: 50% !important;
-  border-right: 6px dashed black;
-  transform: none;
-  border-bottom: none;
-}
-
-.conceptBody .content h3 {
-  color: #8e3330;
-  margin-bottom: 32px;
-  font-size: 1.5rem;
-  line-height: 2;
-  letter-spacing: 0.8ch;
-}
-
-.conceptBody .content p {
-  font-size: 14px;
-  letter-spacing: 2.52px;
-  line-height: 38px;
-}
-
-.conceptBody .caption {
-  position: relative;
-}
-
-.conceptBody .caption .imagebox1 {
-  padding-top: 285px;
-  width: 53.09735%;
-  max-width: 300px;
-}
-
-@media (max-width: 568px) {
-  .conceptBody .caption .imagebox1 {
-    position: absolute;
-    padding: 0;
-    left: 0;
-    bottom: -50%;
-  }
-}
-
-.conceptBody .caption .imagebox1 .img1 {
-  background: url("../images/conceptCap1.png") center/cover no-repeat;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-}
-
-.conceptBody .caption .imagebox2 {
-  position: absolute;
-  z-index: -1;
-  top: 48px;
-  right: 2%;
-  width: 70%;
-}
-
-@media (max-width: 568px) {
-  .conceptBody .caption .imagebox2 {
-    position: static;
-    margin-left: auto;
-  }
-}
-
-.conceptBody .caption .imagebox2 .img2 {
-  background: url("../images/conceptCap2.png") center/cover no-repeat;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-}
-
-/* shopInfo  */
-.shopInfo {
-  background-color: #f8f8f8;
-  padding: 100px 0 80px;
-}
-
-.shopInfoWrapper {
-  display: flex;
-  margin-bottom: 56px;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.shopInfoWrapper > h2 {
-  width: 100%;
-  margin-bottom: 4rem;
-}
-
-.shopInfoWrapper > .content {
-  width: 30%;
-}
-
-.shopInfoWrapper > .shopCaption {
-  width: 62.5%;
-  max-width: 650px;
-  aspect-ratio: 600/415;
-  margin-top: -6.4rem;
-}
-
-@media (max-width: 768px) {
-  .shopInfoWrapper h2 {
-    order: -2;
-    width: 90%;
-  }
-  .shopInfoWrapper .shopCaption {
-    order: -1;
-    width: 90%;
-  }
-  .shopInfoWrapper .content {
-    width: auto;
-    width: 14em;
-  }
-  .shopInfoWrapper > * {
-    margin: 0 auto 56px !important;
-  }
-}
-
-.shopInfoWrapper .content .logo {
-  background: url("../images/logo.png") center/cover no-repeat;
-  aspect-ratio: 111/160;
-  height: 110px;
-  text-align: center;
-  position: relative;
-}
-
-.shopInfoWrapper .content .logo:hover {
-  opacity: 0.75;
-}
-
-.shopInfoWrapper .content .logo:hover::after {
-  background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
-  inset: 0;
-}
-
-.shopInfoWrapper .content .shopName {
-  margin: 16px 0;
-}
-
-.shopInfoWrapper .content .shopAddr {
-  white-space: nowrap;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.shopInfoWrapper .content .shopInfoTable {
+section.news .navList {
   display: flex;
-  justify-content: center;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 30px;
+  justify-content: flex-end;
 }
 
-.shopInfoWrapper .content .socialIcon {
-  color: #8e3330;
+section.news .navItem::before {
+  content: '/';
+  margin: 0 10px;
+}
+
+section.news .navItem:first-of-type::before {
+  content: '';
+}
+
+.cardGroup {
   display: flex;
-  justify-content: center;
 }
 
-.shopInfoWrapper .content .socialIcon i {
-  margin: 0 0.25em;
+.card {
+  flex: 0 30%;
+  margin-bottom: 40px;
 }
 
-.shopInfoWrapper .content .socialIcon i:hover {
-  opacity: 0.5;
-}
-
-@media (max-width: 1100px) {
-  .shopInfoWrapper .content > div {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .shopInfoWrapper .content .shopInfoTable {
-    text-align: left;
-    white-space: nowrap;
-    flex: auto;
-  }
-}
-
-.shopCaption .captionSlide.cap1 {
-  background: url("../images/shopCaption1.png") center/cover no-repeat;
-  aspect-ratio: 65/45;
-}
-
-.shopCaption .captionSlide.cap2 {
-  background: url("../images/shopCaption2.png") center/cover no-repeat;
-  aspect-ratio: 65/45;
-}
-
-.shopCaption .captionSlide.cap3 {
-  background: url("../images/shopCaption3.png") center/cover no-repeat;
-  aspect-ratio: 65/45;
-}
-
-.shopCaption .captionSlide.cap4 {
-  background: url("../images/shopCaption4.png") center/cover no-repeat;
-  aspect-ratio: 65/45;
-}
-
-.shopCaption .capPagination {
-  box-sizing: border-box;
-  padding-right: 2ch;
-  text-align: right;
-  width: auto !important;
-  right: 0;
-  /* transform: scale(2); */
-  font-size: 1.5rem;
-}
-
-.shopCaption .capPagination > .swiper-pagination-bullet {
-  width: 0.5em;
-  height: 0.5em;
-  margin: 0.25em !important;
-  background-color: #8e3330;
-  border: 3px solid white;
-}
-
-.accessWrapper h2 {
-  margin-bottom: 24px;
-}
-
-@media (max-width: 768px) {
-  .accessWrapper h2 {
-    width: 87vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.accessWrapper iframe {
-  width: 100%;
-  aspect-ratio: 2/1;
-  margin-bottom: 72px;
-}
-
-.accessWrapper p {
-  text-align: center;
-  margin-bottom: 16px;
-  letter-spacing: 2px;
-}
-
-.accessBtnGroup {
-  padding: 1.5em;
-  justify-content: center;
-}
-
-.accessBtnGroup > a + a {
-  margin-left: 1.5em;
-}
-
-@media (max-width: 568px) {
-  .accessBtnGroup {
-    flex-wrap: wrap;
-  }
-  .accessBtnGroup > a + a {
-    margin: 1.5em 0 0;
-  }
-}
-
-.accessBtnGroup > a {
-  flex: 0 300px;
-  padding: 1em 0 0.8em;
-  border-radius: 8px;
-  background-color: #8e3330;
-  color: white;
+.cardList {
   display: flex;
   align-items: center;
 }
 
-.accessBtnGroup > a i {
-  border-radius: 50%;
-  margin-left: 1.5em;
-  padding: 0.5em;
-  background: white;
-  color: #8e3330;
-  /* line-height: 2; */
+.cardListItem::before {
+  content: '|';
+  margin: 0 8px;
 }
 
-.accessBtnGroup > a span {
-  margin: auto;
-  white-space: nowrap;
+.cardListItem:first-of-type::before {
+  content: '';
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=news.css.map */

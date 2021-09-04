@@ -2,55 +2,87 @@
 <html lang="zh-Hant-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/news.css">
-    <link rel="icon" type="image/png" href="https://shinon-deli.com/assets/img/common/android-touch-icon.png" sizes="192x192">
-    <title>MENUの紹介（2）SHINON特製ローストビーフ | SHINON | 洋采舎SHINON：大阪・箕面にあるテイクアウト専門の洋風惣菜店</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/news.css">
+	<link rel="stylesheet" href="fontAwesome/css/all.css">
+	<link rel="stylesheet" href="fontAwesome/css/brands.css">
+	<link rel="stylesheet" href="fontAwesome/css/solid.css">
+	<link rel="icon" type="image/png" href="https://shinon-deli.com/assets/img/common/android-touch-icon.png"
+		sizes="192x192">
+	<title>MENUの紹介（2）SHINON特製ローストビーフ | SHINON | 洋采舎SHINON：大阪・箕面にあるテイクアウト専門の洋風惣菜店</title>
 </head>
 
 <body>
-    <header></header>
-    <main class="cntr">
-        <div class="banner">
-            <picture>
-                <source media="(min-width: 751px)" srcset="images/news/mv_img@2x.jpg 2x, images/news/mv_img.jpg 1x">
-                <source media="(max-width: 750px)" srcset="images/news/mv_img_sp.jpg">
-                <img class="bannerImg" src="images/news/mv_img.jpg" alt="">
-            </picture>
-        </div>
-        <section class="news">
-            <!-- cooking menu information store -->
-            <header>
-                <h2>NEWS</h2>
-                <nav>
-                    <ul class="navList">
-                        <li class="navItem"><a class="navLink" href="#!">お料理のこと</a></li>
-                        <li class="navItem"><a class="navLink" href="#!">お知らせ</a></li>
-                        <li class="navItem"><a class="navLink" href="#!">メニューのこと</< /li>
-                        <li class="navItem"><a class="navLink" href="#!">お店のこと</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class="cardGroup">
-                    <div class="card">
-                        <div class="cardImg"
-                            style="padding-top: 66.5%; background: url('images/news/post_noimage.png') center/ cover no-repeat;">
-                        </div>
-                        <div class="cardtitle">夏季休暇のお知らせ</div>
-                        <ul class="cardList">
-                            <li class="cardListItem">2021.07.18</li>
-                            <li class="cardListItem">お知らせ</li>
-                            <li class="cardListItem">お店のこと</li>
-                        </ul>
-                    </div>
-                </div>
-            </main>
-        </section>
-        <p class="copyright">© 2021 Shinon Deli</p>
-    </main>
+	<header class="navbar">
+		<nav class="cntr">
+			<div class="navLeft">
+				<ul class="navList">
+					<li class="navItem"> <a href="index.html#news" class="navLink"><span>NEWS</span></a></li>
+					<li class="navItem"> <a href="index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
+					<li class="navItem"> <a href="menu.html" class="navLink"><span>MENU</span></a></li>
+				</ul>
+			</div>
+			<div class="navCenter"><a href="./index.html" class="logo"></a></div>
+			<div class="navRight">
+				<ul class="navList">
+					<li class="navItem"><a href="index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
+					<li class="navItem"><a href="contact" class="navLink"><span>CONTACT</span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- <input type="checkbox" id="navShow"> -->
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="socialIcon">
+			<i class="fab fa-instagram fa-fw fa-2x"></i>
+			<i class="fas fa-envelope fa-fw fa-2x"></i>
+		</div>
+		<!-- <a href="#main" class="toTop"><i class="fas fa-4x fa-arrow-up"></i></a> -->
+	</header>
+	<main class="cntr">
+		<div class="banner">
+			<picture>
+				<source media="(min-width: 751px)" srcset="images/news/mv_img@2x.jpg 2x, images/news/mv_img.jpg 1x">
+				<source media="(max-width: 750px)" srcset="images/news/mv_img_sp.jpg">
+				<img class="bannerImg" src="images/news/mv_img.jpg" alt="">
+			</picture>
+		</div>
+		<section class="news">
+			<!-- cooking menu information store -->
+			<header>
+				<h2>NEWS</h2>
+				<nav>
+					<ul class="navList">
+						<li class="navItem"><a class="navLink" href="#!">お料理のこと</a></li>
+						<li class="navItem"><a class="navLink" href="#!">お知らせ</a></li>
+						<li class="navItem"><a class="navLink" href="#!">メニューのこと</< /li>
+						<li class="navItem"><a class="navLink" href="#!">お店のこと</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<div class="cardGroup">
+					<div class="card">
+						<div class="cardImg"
+							style="padding-top: 66.5%; background: url('images/news/post_noimage.png') center/ cover no-repeat;">
+						</div>
+						<div class="cardtitle">夏季休暇のお知らせ</div>
+						<ul class="cardList">
+							<li class="cardListItem">2021.07.18</li>
+							<li class="cardListItem">お知らせ</li>
+							<li class="cardListItem">お店のこと</li>
+						</ul>
+					</div>
+				</div>
+			</main>
+		</section>
+		<p class="copyright">© 2021 Shinon Deli</p>
+	</main>
+	<script src="js/navbar.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,9 @@
 @import "utility";
 @import "navbar";
 @import "footer";
+// html{
+// 	scroll-behavior: smooth;
+// }
 .cntr {
 	// max-width: 1130px;
 	width: 88.28125%;
@@ -20,6 +23,11 @@ header .cntr {
 // 	width: 88.28125%;
 // 	margin: 0 auto unquote("min(10vw, 80px)");
 // }
+.SwiperPositionParent{
+	padding: 0 50px;
+	position: relative;
+	margin: 0 -50px;
+}
 .swiper-slide img {
 	max-width: 100%;
 	// vertical-align: top;
@@ -38,10 +46,10 @@ header .cntr {
 		}
 	}
 }
-section {
-	position: relative;
-	scroll-snap-type: block;
-}
+// section {
+// 	position: relative;
+// 	scroll-snap-type: block;
+// }
 .scroller {
 	writing-mode: vertical-lr;
 	cursor: pointer;
@@ -49,7 +57,8 @@ section {
 	z-index: 999;
 	color: black;
 	top: 0;
-	right: -50px;
+	// right: -50px;
+	right: 0;
 	width: 40px;
 	height: 12em;
 	.img {

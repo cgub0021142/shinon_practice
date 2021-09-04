@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
-	<link rel="icon" href="/images/ico/favicon.ico">
+	<link rel="icon" href="images/ico/favicon.ico">
 	<link rel="stylesheet" href="fontAwesome/css/all.css">
 	<link rel="stylesheet" href="fontAwesome/css/brands.css">
 	<link rel="stylesheet" href="fontAwesome/css/solid.css">
@@ -26,7 +26,7 @@
 					<li class="navItem"> <a href="menu.html" class="navLink"><span>MENU</span></a></li>
 				</ul>
 			</div>
-			<div class="navCenter"><a href="/" class="logo"></a></div>
+			<div class="navCenter"><a href="./index.html" class="logo"></a></div>
 			<div class="navRight">
 				<ul class="navList">
 					<li class="navItem"><a href="index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
@@ -46,35 +46,7 @@
 		</div>
 		<!-- <a href="#main" class="toTop"><i class="fas fa-4x fa-arrow-up"></i></a> -->
 	</header>
-	<script>
-		// navbar collapse when you scroll down
-		let htmlScrollTop = 0;
-		document.addEventListener('scroll', function (e) {
-			let navbar = document.querySelector('header.navbar')
-			let nowScrollTop = document.querySelector('html').scrollTop
-			console.log(nowScrollTop)
-			if(nowScrollTop >= htmlScrollTop)
-				navbar.classList.add('collapse')
-			else
-				navbar.classList.remove('collapse')
-			console.log(htmlScrollTop)
-			htmlScrollTop = nowScrollTop
-			console.log(htmlScrollTop)
-		}, { passive: true })
-		document.querySelector('.hamburger').addEventListener('click', function () {
-			document.querySelector('header.navbar').classList.toggle('active');
-			document.querySelector('body').classList.toggle('noScrollBar');
-		})
-		//手機模式下，沒有點完，選單要關閉
-		document.querySelectorAll('.navLink').forEach(link => {
-			link.addEventListener('click', function () {
-				let hamburger = document.querySelector('header.navbar')
-				let classList = hamburger.classList;
-				if (classList.contains('active'))
-					hamburger.classList.remove('active');
-			})
-		})
-	</script>
+
     <main>
         <article>
             <div class="menu-header">
@@ -159,7 +131,7 @@
                         </a>
                     </div>
                     <div class="contact-btn mail">
-                        <a href="/contact/">
+                        <a href="contact/">
                             <span class="ico"></span>
                             メールフォームはこちら
                         </a>
@@ -172,6 +144,7 @@
 	<footer class="siteFooter">
 		<p class="copyright">© 2021 Shinon Deli</p>
 	</footer>
+	<script src="js/navbar.js"></script>
 </body>
 
 </html>

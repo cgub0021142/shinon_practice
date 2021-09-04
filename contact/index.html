@@ -8,33 +8,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../style/contact.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
         integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
         crossorigin='anonymous'></script>
 </head>
 
 <body>
-    <header class="navbar">
-        <nav class="cntr">
-          <div class="navLeft">
-            <ul class="navList">
-              <li class="navItem"> <a href="/index.html#news" class="navLink"><span>NEWS</span></a></li>
-              <li class="navItem"> <a href="/index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
-              <li class="navItem"> <a href="#!" class="navLink"><span>MENU</span></a></li>
-            </ul>
-          </div>
-          <div class="navCenter"><a href="/" class="logo"></a></div>
-          <div class="navRight">
-            <ul class="navList">
-              <li class="navItem"><a href="/index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
-              <li class="navItem"><a href="/contact" class="navLink"><span>CONTACT</span></a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+	<header class="navbar">
+		<nav class="cntr">
+			<div class="navLeft">
+				<ul class="navList">
+					<li class="navItem"> <a href="../index.html#news" class="navLink"><span>NEWS</span></a></li>
+					<li class="navItem"> <a href="../index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
+					<li class="navItem"> <a href="../menu.html" class="navLink"><span>MENU</span></a></li>
+				</ul>
+			</div>
+			<div class="navCenter"><a href="../index.html" class="logo"></a></div>
+			<div class="navRight">
+				<ul class="navList">
+					<li class="navItem"><a href="../index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
+					<li class="navItem"><a href="contact" class="navLink"><span>CONTACT</span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- <input type="checkbox" id="navShow"> -->
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="socialIcon">
+			<i class="fab fa-instagram fa-fw fa-2x"></i>
+			<i class="fas fa-envelope fa-fw fa-2x"></i>
+		</div>
+		<!-- <a href="#main" class="toTop"><i class="fas fa-4x fa-arrow-up"></i></a> -->
+	</header>
     <section class="contact cntr">
         <h2>contact</h2>
         <form action="" class="contactForm">
@@ -98,7 +107,8 @@
                 $('.reservation').slideToggle(300);
             })
         })
-    </script>
+	</script>
+	<script src="../js/navbar.js"></script>
 </body>
 
 </html>
