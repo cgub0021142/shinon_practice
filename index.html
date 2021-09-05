@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="fontAwesome/css/all.css">
 	<link rel="stylesheet" href="fontAwesome/css/brands.css">
 	<link rel="stylesheet" href="fontAwesome/css/solid.css">
+
 	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css"> -->
 	<link rel="stylesheet" href="asset/swiper/swiper.css">
@@ -19,12 +20,13 @@
 
 	<!-- <link rel="stylesheet" href="css/style2.css"> -->
 	<link rel="stylesheet" href="style/index.css">
+
 	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="asset/aos/aos.css">
+
 	<!-- <base href="https://cgub0021142.github.io/shinon_practice/"> -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
-		integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
-		crossorigin='anonymous'></script>
+
+	<script src="asset/jq/jq.js"></script>
 </head>
 
 <body>
@@ -34,13 +36,13 @@
 				<ul class="navList">
 					<li class="navItem"> <a href="index.html#news" class="navLink"><span>NEWS</span></a></li>
 					<li class="navItem"> <a href="index.html#concept" class="navLink"><span>CONCEPT</span></a></li>
-					<li class="navItem"> <a href="menu.html" class="navLink"><span>MENU</span></a></li>
+					<li class="navItem"><a href="index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
 				</ul>
 			</div>
 			<div class="navCenter"><a href="./index.html" class="logo"></a></div>
 			<div class="navRight">
 				<ul class="navList">
-					<li class="navItem"><a href="index.html#shopInfo" class="navLink"><span>SHOP INFO</span></a></li>
+					<li class="navItem"> <a href="menu.html" class="navLink"><span>MENU</span></a></li>
 					<li class="navItem"><a href="contact" class="navLink"><span>CONTACT</span></a></li>
 				</ul>
 			</div>
@@ -219,7 +221,7 @@
 			<div class="">
 				<h2>NEWS</h2>
 				<div class="cardCntr row">
-					<div class="card col-4 col-md-6 col-sm-12">
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
 						<div class="cardImg" style="background-image: url('./images/news/post_noimage.png');"></div>
 						<div class="cardBody">
 							<h3 class="cardTitle">夏季休暇のお知らせ</h3>
@@ -229,8 +231,8 @@
 								<span class="menu">お店のこと</span>
 							</h4>
 						</div>
-					</div>
-					<div class="card col-4 col-md-6 col-sm-12">
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
 						<div class="cardImg" style="background-image: url(./images/news/thumbNail1.jpg);"></div>
 						<div class="cardBody">
 							<h3 class="cardTitle">SHINONのちりめん山椒</h3>
@@ -240,8 +242,8 @@
 								<span class="menu">メニューのこと</span>
 							</h4>
 						</div>
-					</div>
-					<div class="card col-4 col-md-6 col-sm-12">
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
 						<div class="cardImg" style="background-image: url(./images/news/thumbNail2.jpg);"></div>
 						<div class="cardBody">
 							<h3 class="cardTitle">MENUの紹介（4）煮込み料理</h3>
@@ -250,7 +252,7 @@
 								<span class="menu">メニューのこと</span>
 							</h4>
 						</div>
-					</div>
+					</a>
 
 				</div>
 				<div class="allNews"><a href="news.html">ALL NEWS&emsp;<i class="fas fa-long-arrow-alt-right"></i></a>
@@ -373,7 +375,7 @@
 			},
 			loop: true,
 		});
-		var shopInfoCap = new Swiper(".shopInfo .shopCaption", {
+		var shopInfoCap = new Swiper(".shopCaption", {
 			speed: 800,
 			// spaceBetween: 30,
 			centeredSlides: true,
