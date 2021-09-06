@@ -103,6 +103,7 @@ $primary-color: #8e3330;
 			display: block;
 			padding: 0 30px;
 			color: #000;
+			white-space: nowrap;
 			// padding: 0 3.55vw;
 			@include pc {
 				padding: 0 20px;

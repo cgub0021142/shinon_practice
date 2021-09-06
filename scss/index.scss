@@ -23,10 +23,16 @@ header .cntr {
 // 	width: 88.28125%;
 // 	margin: 0 auto unquote("min(10vw, 80px)");
 // }
-.SwiperPositionParent{
+.SwiperPositionParent {
 	padding: 0 50px;
-	position: relative;
 	margin: 0 -50px;
+	//讓你在圖片框外面多了50公分的畫布
+	//overflow-x目前想到的方法是算內部的寬度
+	@include phone {
+		margin: 0;
+		padding: 0;
+	}
+	position: relative;
 }
 //大圖片小圖片
 .swiper-slide img {
@@ -62,6 +68,9 @@ header .cntr {
 	right: 0;
 	width: 40px;
 	height: 12em;
+	@include phone {
+		display: none;
+	}
 	.img {
 		background: url(../images/arrow.svg) left top/50% 130% no-repeat;
 		position: absolute;
@@ -93,7 +102,7 @@ header .cntr {
 	}
 }
 section.slogan {
-	width: 200px;
+	max-width: 200px;
 	aspect-ratio: 1/1;
 	margin: 0 auto 65px;
 	// background: url(../images/slogan.svg) no-repeat center/100%;
@@ -262,7 +271,7 @@ section.slogan {
 .shopInfo {
 	background-color: #f8f8f8;
 	padding: 100px 0 80px;
-	@include pad{
+	@include pad {
 		padding-top: 20px;
 	}
 }
@@ -463,4 +472,3 @@ section.slogan {
 		}
 	}
 }
-

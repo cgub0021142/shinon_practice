@@ -61,40 +61,41 @@
 	</header>
 	<main id="main" class="">
 		<section class="cntr">
-			<div class="SwiperPositionParent">
-				<div class="swiper-container banner-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="images/main1_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main1_sp.jpg" alt="main_slide" class="sp">
-						</div>
-						<div class="swiper-slide">
-							<img src="images/main2_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main2_sp.jpg" alt="main_slide" class="sp">
-						</div>
-						<div class="swiper-slide">
-							<img src="images/main3_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main3_sp.jpg" alt="main_slide" class="sp">
+				<div class="SwiperPositionParent">
+					<div class="swiper-container banner-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/main1_pc.jpg" alt="main_slide" class="pc">
+								<img src="images/main1_sp.jpg" alt="main_slide" class="sp">
+							</div>
+							<div class="swiper-slide">
+								<img src="images/main2_pc.jpg" alt="main_slide" class="pc">
+								<img src="images/main2_sp.jpg" alt="main_slide" class="sp">
+							</div>
+							<div class="swiper-slide">
+								<img src="images/main3_pc.jpg" alt="main_slide" class="pc">
+								<img src="images/main3_sp.jpg" alt="main_slide" class="sp">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="scroller">
-					<div class="img"></div>
-					<div class="text">scroll down</div>
+					<div class="scroller">
+						<div class="img"></div>
+						<div class="text">scroll down</div>
+					</div>
 				</div>
 			</div>
-
-			<script>
-				$('.scroller').click(function () {
-					// console.log($(this).closest("section").next().offset().top)
-					// console.log($(this).closest("section").next())
-					$('html').animate({
-						scrollTop: $(this).closest("section").next().offset().top - $('.navbar').outerHeight()
-					}, 100)
-
-				})
-			</script>
 		</section>
+		<script>
+			$('.scroller').click(function () {
+				// console.log($(this).closest("section").next().offset().top)
+				// console.log($(this).closest("section").next())
+				$('html').animate({
+					scrollTop: $(this).closest("section").next().offset().top - $('.navbar').outerHeight()
+				}, 100)
+
+			})
+		</script>
+
 		<section class="cntr slogan">
 			<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
