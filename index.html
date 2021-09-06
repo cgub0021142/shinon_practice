@@ -62,7 +62,7 @@
 	<main id="main" class="">
 		<section class="cntr">
 			<div class="SwiperPositionParent">
-				<div class="swiper-container mySwiper1">
+				<div class="swiper-container banner-swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<img src="images/main1_pc.jpg" alt="main_slide" class="pc">
@@ -319,7 +319,7 @@
 
 				</div>
 				<div class="shopCaption">
-					<div class="swiper-container ">
+					<div class="swiper-container shopCaption-swiper">
 						<div class="swiper-wrapper captionSlideWrapper">
 							<div class="swiper-slide captionSlide cap1"></div>
 							<div class="swiper-slide captionSlide cap2"></div>
@@ -366,7 +366,7 @@
 
 	<!-- Initialize Swiper -->
 	<script>
-		var swiper = new Swiper(".mySwiper1", {
+		var swiper = new Swiper(".banner-swiper", {
 			spaceBetween: 30,
 			centeredSlides: true,
 			autoplay: {
@@ -375,7 +375,7 @@
 			},
 			loop: true,
 		});
-		var shopInfoCap = new Swiper(".shopCaption", {
+		var shopInfoCap = new Swiper(".shopCaption-swiper", {
 			speed: 800,
 			// spaceBetween: 30,
 			centeredSlides: true,
