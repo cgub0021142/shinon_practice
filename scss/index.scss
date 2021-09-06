@@ -28,6 +28,7 @@ header .cntr {
 	position: relative;
 	margin: 0 -50px;
 }
+//大圖片小圖片
 .swiper-slide img {
 	max-width: 100%;
 	// vertical-align: top;
@@ -261,6 +262,9 @@ section.slogan {
 .shopInfo {
 	background-color: #f8f8f8;
 	padding: 100px 0 80px;
+	@include pad{
+		padding-top: 20px;
+	}
 }
 //container
 .shopInfoWrapper {
