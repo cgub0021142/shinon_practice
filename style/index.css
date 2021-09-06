@@ -457,6 +457,13 @@ h2::after {
 		padding-left: 20px;
 }
 
+.row-wrap .row {
+		margin: -10px;
+}
+.row-wrap [class*=col] {
+		padding: 0 10px;
+}
+
 @media (max-width: 1100px) {
 		.d-lg-block {
 				display: block;
@@ -903,8 +910,6 @@ section.slogan svg {
 		max-width: 860px;
 		aspect-ratio: 850/520;
 		background: url("../images/conceptImg.png") center/cover no-repeat;
-		background-clip: content-box;
-		background-origin: content-box;
 		border-radius: 8px;
 }
 

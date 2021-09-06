@@ -1,9 +1,10 @@
 $columns: 12;
+$gutter: 20px;
 // @import "mediaQuery";
 .row {
 	display: flex;
 }
-.row-wrap{
+.row-wrap {
 	flex-wrap: wrap;
 }
 @for $i from 1 through $columns {
@@ -34,9 +35,14 @@ $columns: 12;
 		}
 	}
 }
-[class*="col"] + [class*="col"]{
-	padding-left: 20px;
+[class*="col"] + [class*="col"] {
+	padding-left: $gutter
 }
-// .row{
-// 	margin: 0 -20px;
-// }
+.row-wrap {
+	.row {
+		margin: 0 -$gutter/2;
+	}
+	[class*="col"] {
+		padding: 0 $gutter/2;
+	}
+}

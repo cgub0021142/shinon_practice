@@ -87,10 +87,8 @@
 		</section>
 		<script>
 			$('.scroller').click(function () {
-				// console.log($(this).closest("section").next().offset().top)
-				// console.log($(this).closest("section").next())
 				$('html').animate({
-					scrollTop: $(this).closest("section").next().offset().top - $('.navbar').outerHeight()
+					scrollTop: $('section').eq(1).offset().top - $('.navbar').outerHeight()
 				}, 100)
 
 			})
