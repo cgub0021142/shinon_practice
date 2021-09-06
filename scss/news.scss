@@ -34,6 +34,9 @@ section.news .navItem:first-of-type::before {
 .card {
 	margin-bottom: 40px;
 }
+.card-hide{
+	display: none;
+}
 .cardImg{
 	padding-top: 66.5%;
 	background: center/ cover no-repeat;
