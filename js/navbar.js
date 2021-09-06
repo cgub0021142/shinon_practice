@@ -47,8 +47,10 @@ $("a[href*='#']").click(function () {
 	if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') )
 	{
 		let target = $(this.hash);
+		// let paddingTop = target.innerHeight() - target.height();
+		let paddingTop = target.css('padding-top')
 		let headerHight = $('header.navbar').outerHeight();
-		let position = target.offset().top - headerHight;
+		let position = target.offset().top - headerHight + paddingTop;
 		linkMoving++;
 		$("html").animate({ scrollTop: position },
 			{
