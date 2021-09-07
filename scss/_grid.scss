@@ -67,10 +67,12 @@ $gutter: 20px;
 }
 .row-wrap {
 	&.row {
-		margin: 0 (-$gutter / 2);
+		margin-left: 0 (-$gutter / 2);
+		margin-right: 0 (-$gutter / 2);;
 	}
 	> [class*="col"] {
-		padding: 0 $gutter/2;
+		padding-left: $gutter/2;
+		padding-right: $gutter/2;
 	}
 }
 // // cntr
