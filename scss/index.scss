@@ -277,31 +277,30 @@ section.slogan {
 }
 //container
 .shopInfoWrapper {
-	display: flex;
+	// display: flex;
+	// flex-wrap: wrap;
 	margin-bottom: 56px;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	> h2 {
-		width: 100%;
+		// width: 100%;
 		margin-bottom: 4rem;
 	}
 	> .content {
-		width: 30%;
+		// width: 30%;
 	}
-	> .shopCaption {
-		width: 62.5%;
-		max-width: 650px;
+	.shopCaption {
+		// width: 62.5%;
+		// max-width: 650px;
 		aspect-ratio: 600/415;
 		margin-top: $h2-size * -1.2 - 4;
+		overflow: hidden;
 	}
 	@include pad {
+		justify-content: space-between;
 		h2 {
 			order: -2;
-			width: 90%;
 		}
 		.shopCaption {
 			order: -1;
-			width: 90%;
 		}
 		.content {
 			width: auto;
@@ -332,6 +331,9 @@ section.slogan {
 	}
 	.shopName {
 		margin: 16px 0;
+		@include phone{
+			text-align: center;
+		}
 	}
 	.shopAddr {
 		white-space: nowrap;
@@ -340,10 +342,6 @@ section.slogan {
 	}
 	.shopInfoTable {
 		display: flex;
-		// text-align: center;
-		// width: auto;
-		// justify-content: space-between;
-		justify-content: center;
 		font-size: 0.875rem;
 		line-height: 1.5;
 		.itemName {
@@ -358,7 +356,7 @@ section.slogan {
 	.socialIcon {
 		color: #8e3330;
 		display: flex;
-		justify-content: center;
+		// justify-content: center;
 		i {
 			// margin-right: .5em;
 			margin: 0 0.25em;
@@ -371,9 +369,9 @@ section.slogan {
 	}
 	@include pc {
 		> div {
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
+			// margin-left: auto;
+			// margin-right: auto;
+			// text-align: center;
 		}
 		.shopInfoTable {
 			// width: 220%;

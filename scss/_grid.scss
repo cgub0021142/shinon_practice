@@ -7,12 +7,39 @@ $gutter: 20px;
 .row-wrap {
 	flex-wrap: wrap;
 }
+.jcsb{
+	justify-content: space-between;
+}
+.jcsb-sm{
+	@include phone{
+		justify-content: space-between;
+	}
+}
+.jcc-sm{
+	@include phone{
+		justify-content: center;
+	}
+}
+.jcc-md{
+	@include pad{
+		justify-content: center;
+	}
+}
+.block-center-md{
+	@include pad{
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+.col{
+	flex: 0 auto;
+}
 @for $i from 1 through $columns {
 	.col-#{$i} {
 		flex: 0 0 (100% / $columns * $i);
 	}
 }
-@for $i from 1 through $columns {
+@for $i from 0 through $columns {
 	.col-offset-#{$i} {
 		margin-left: 100% / $columns * $i;
 	}
@@ -20,7 +47,7 @@ $gutter: 20px;
 @each $bp-key, $bp-val in $grid-breakpoint {
 	@media (max-width: $bp-val) {
 		@for $i from 1 through $columns {
-			.col-#{$bp-key}#{$i} {
+			.col#{$bp-key}-#{$i} {
 				flex: 0 0 (100%/12 * $i);
 			}
 		}
@@ -28,21 +55,60 @@ $gutter: 20px;
 }
 @each $bp-key, $bp-val in $grid-breakpoint {
 	@media (max-width: $bp-val) {
-		@for $i from 1 through $columns {
-			.col-offset-#{$bp-key}#{$i} {
+		@for $i from 0 through $columns {
+			.col-offset#{$bp-key}-#{$i} {
 				margin-left: (100%/12 * $i);
 			}
 		}
 	}
 }
 [class*="col"] + [class*="col"] {
-	padding-left: $gutter
+	padding-left: $gutter;
 }
 .row-wrap {
-	.row {
-		margin: 0 -$gutter/2;
+	&.row {
+		margin: 0 (-$gutter / 2);
 	}
-	[class*="col"] {
+	> [class*="col"] {
 		padding: 0 $gutter/2;
 	}
 }
+// // cntr
+// .cntr {
+// 	max-width:  map-get($map: $grid-breakpoint, $key: -lg);
+// 	margin: 0 auto;
+// 	// overflow: hidden;
+// }
+// @each $bp-key, $bp-val in $grid-breakpoint {
+// 	@media (max-width: $bp-val) {
+// 		.cntr {
+// 			// max-width: $bp-val * 0.9;
+// 			max-width: 80vw;
+// 			margin: 0 auto;
+// 			// overflow: hidden;
+// 		}
+// 	}
+// }
+// @each $bp-key, $bp-val in $grid-breakpoint {
+// 	@media (max-width: $bp-val) {
+// 		.cntr#{$bp-key} {
+// 			max-width: $bp-val * 0.9;
+// 			margin: 0 auto;
+// 			// overflow: hidden;
+// 		}
+// 	}
+// }
+// //bp 以下有置中的效果，如果你只要lg有效果，要搭配cntr-sm-fluid
+// @each $bp-key, $bp-val in $grid-breakpoint {
+// 	// @media (max-width: $bp-val) {
+// 		.cntr#{$bp-key} {
+// 			max-width: $bp-val * 0.9;
+// 			margin: 0 auto;
+// 			// overflow: hidden;
+// 		}
+// 		.cntr#{$bp-key}-fluid{
+// 			width: 90%;
+// 			margin: 0 auto;
+// 		}
+// 	// }
+// }
