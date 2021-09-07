@@ -660,6 +660,7 @@ h2::after {
 		background-color: #8e3330;
 		z-index: 1000;
 		min-height: 100vh;
+		margin-bottom: 0;
 	}
 	.navbar.active::-webkit-scrollbar {
 		display: none;
