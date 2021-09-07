@@ -1,5 +1,4 @@
 /* navbar.scss start */
-$primary-color: #8e3330;
 @mixin hamburger($width: var(--box-width), $dashH: var(--dash-height)) {
 	--box-width: 50px;
 	--dash-width: 80%;
@@ -87,9 +86,9 @@ $primary-color: #8e3330;
 		.logo {
 			display: block;
 			background: url(../images/logo.jpg) center / contain no-repeat;
-			// aspect-ratio: 111/160;
+			aspect-ratio: 111/160;
 			margin: 0 28px;
-			height: 80px;
+			// height: 80px;
 			width: 55px;
 		}
 	}
@@ -121,7 +120,7 @@ $primary-color: #8e3330;
 				height: 0;
 				right: -1ch;
 				left: -1ch;
-				background-color: darkorange;
+				background-color: $under-line;
 			}
 		}
 		.navLink:hover span::after {
@@ -164,7 +163,7 @@ $primary-color: #8e3330;
 			position: fixed;
 			inset: 0;
 			overflow-y: auto;
-			background-color: #8e3330;
+			background-color: $primary-color;
 			z-index: 1000;
 			min-height: 100vh;
 			margin-bottom: 0;
@@ -221,8 +220,8 @@ $primary-color: #8e3330;
 		position: fixed;
 		bottom: 0;
 		right: 20px;
-		color: #8e3330;
-		border: 2px solid #8e3330;
+		color: $primary-color;
+		border: 2px solid $primary-color;
 		border-radius: 50%;
 		padding: 2em;
 	}
