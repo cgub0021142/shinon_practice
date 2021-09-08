@@ -3,18 +3,20 @@
 // html{
 // 	scroll-behavior: smooth;
 // }
-.cntr {
-	// max-width: 1130px;
-	width: 88.28125%;
-	margin: 24px auto unquote("min(10vw, 80px)");
-}
+// .cntr {
+// 	// max-width: 1130px;
+// 	width: 88.28125%;
+// 	margin: 24px auto unquote("min(10vw, 80px)");
+// }
 header .cntr {
 	width: 88.28125%;
 	margin: 0 auto;
 	//padding 放在外面的cntr(.navbar)因為會轉成fixed
 }
 
-
+.ttt{
+	min-width: 275px;
+}
 .SwiperPositionParent {
 	//讓你在圖片框外面多了50公分的畫布
 	//這個50公分的畫布產生，overflow-x目前想到的方法是算內部的寬度

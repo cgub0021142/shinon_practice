@@ -83,6 +83,7 @@ $gutter: 20px;
 // cntr
 .cntr {
 	width: 90%;
+	max-width: map-get($map: $grid-breakpoint, $key: -lg);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -91,7 +92,8 @@ $gutter: 20px;
 @each $bp-key, $bp-val in $grid-breakpoint {
 	@media (max-width: $bp-val) {
 		.cntr#{$bp-key} {
-			width: $bp-val * 0.9;
+			// width: $bp-val * 0.9;
+			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
 		}
