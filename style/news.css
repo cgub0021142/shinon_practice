@@ -54,6 +54,7 @@ h2::after {
 }
 
 .row-wrap {
+	display: flex;
 	flex-wrap: wrap;
 }
 

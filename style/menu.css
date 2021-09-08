@@ -54,6 +54,7 @@ h2::after {
 }
 
 .row-wrap {
+	display: flex;
 	flex-wrap: wrap;
 }
 
@@ -835,7 +836,7 @@ h2::after {
 }
 
 .menu-header__img {
-	background: url(../images/menu/hero_img.jpg) center/cover no-repeat;
+	background: url(/shinon_practice/images/menu/hero_img.jpg) center/cover no-repeat;
 	width: 88.28125%;
 	max-width: 1130px;
 	height: 450px;
@@ -927,7 +928,7 @@ h2::after {
 	background-color: #fefec3;
 }
 .side-dish .side-dish__img {
-	background: url("/images/menu/oneday_menu_img.jpg") center/cover no-repeat;
+	background: url("/shinon_practice/images/menu/oneday_menu_img.jpg") center/cover no-repeat;
 	aspect-ratio: 234/170;
 	position: absolute;
 	bottom: -78px;
@@ -971,10 +972,10 @@ h2::after {
 	aspect-ratio: 291/203;
 }
 .menu-with-img .img1 {
-	background: url("/images/menu/row_menu_img01.jpg") center/cover no-repeat;
+	background: url("/shinon_practice/images/menu/row_menu_img01.jpg") center/cover no-repeat;
 }
 .menu-with-img .img2 {
-	background: url("/images/menu/row_menu_img02.jpg") center/cover no-repeat;
+	background: url("/shinon_practice/images/menu/row_menu_img02.jpg") center/cover no-repeat;
 }
 
 .menu-without-img {
@@ -1042,12 +1043,12 @@ h2::after {
 }
 .contact-group .tel .ico {
 	margin-right: 33px;
-	background: url(/images/ico/ico_tel.png) no-repeat center;
+	background: url(/shinon_practice/images/ico/ico_tel.png) no-repeat center;
 	background-size: 16px auto;
 	background-color: #fff;
 }
 .contact-group .mail .ico {
-	background: url(/images/ico/ico_mail.png) no-repeat center;
+	background: url(/shinon_practice/images/ico/ico_mail.png) no-repeat center;
 	background-size: 20px auto;
 	background-color: #fff;
 }
@@ -1061,7 +1062,7 @@ h2::after {
 }
 
 .menu-footer {
-	background: url(/images/menu/btm_key_img@2x.jpg) center/cover no-repeat;
+	background: url(/shinon_practice/images/menu/btm_key_img@2x.jpg) center/cover no-repeat;
 	aspect-ratio: 1075/462;
 }
 
