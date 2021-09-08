@@ -3,20 +3,50 @@ let linkMoving = 0;
 let transitionTime = 300
 
 // navbar collapse when you scroll down
+let top__when__scrolldown = 0
 let previousScrollTop = 0;
+let checkDistance = false;
+let timerID = null
 document.addEventListener('scroll', function (e) {
+
 	let navbar = document.querySelector('header.navbar')
+
+	let windowH = window.innerHeight
+	console.log('H',windowH)
 	let nowScrollTop = document.querySelector('html').scrollTop
-	// console.log('nowScrollTop',nowScrollTop)
-	if(nowScrollTop >= previousScrollTop && !linkMoving){
-		// console.log('previousScrollTop:', previousScrollTop)
-		// console.log('nowScrollTop',nowScrollTop)
-		navbar.classList.add('collapse')
-		
+	console.log('timerID:', timerID)
+	if (nowScrollTop >= previousScrollTop && !linkMoving) {
+		console.log('yes:')
+		if (!timerID) {
+			timerID = setInterval(() => {
+				console.log('nowScrollTop - top__when__scrolldown:', nowScrollTop - top__when__scrolldown)
+				console.log('windowH * .1:', windowH * .1)
+				if (nowScrollTop - top__when__scrolldown > windowH * .1)
+					navbar.classList.add('collapse')
+			}, 100);
+			setTimeout(() => {
+				clearInterval(timerID)
+			}, 2000);
+		}
+	}
+	else {
+		console.log('no')
+		navbar.classList.remove('collapse')
+		if (timerID) {
+			clearTimeout(timerID)
+			timerID = null
+		}
+	}
+
+	console.log('nowScrollTop:', nowScrollTop)
+	if (previousScrollTop > nowScrollTop){
+		top__when__scrolldown = nowScrollTop
+		previousScrollTop = nowScrollTop
 	}
 	else
-		navbar.classList.remove('collapse')
-	previousScrollTop = nowScrollTop
+		previousScrollTop = nowScrollTop
+	console.log('previousScrollTop:', previousScrollTop)
+	console.log('top__when__scrolldown:', top__when__scrolldown)
 }, { passive: true })
 document.querySelector('.hamburger').addEventListener('click', function () {
 	document.querySelector('header.navbar').classList.toggle('active');
@@ -44,8 +74,7 @@ function movingCnt() {
 }
 
 $("a[href*='#']").click(function () {
-	if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') )
-	{
+	if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')) {
 		let target = $(this.hash);
 		// let paddingTop = target.innerHeight() - target.height();
 		let paddingTop = target.css('padding-top')
@@ -57,6 +86,6 @@ $("a[href*='#']").click(function () {
 				duration: transitionTime,
 				complete: movingCnt
 			});
-	// $('html').scrollTop(position)
+		// $('html').scrollTop(position)
 	}
 });
