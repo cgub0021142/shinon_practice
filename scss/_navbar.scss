@@ -133,12 +133,12 @@
 		display: none;
 	}
 	.socialIcon {
-		display: flex;
 		position: absolute;
-		right: 6%;
+		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
 		@include pad {
+			right: 6%;
 			top: unset;
 			bottom: 0;
 			transform: none;
@@ -173,9 +173,8 @@
 				position: static;
 				transform: none;
 				color: white;
-				// margin: 0 auto;
 				> * + * {
-					margin-left: 0.5em;
+					// margin-left: 0.5em;
 				}
 			}
 			nav {

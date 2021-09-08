@@ -60,29 +60,30 @@
 		<!-- <a href="#main" class="toTop"><i class="fas fa-4x fa-arrow-up"></i></a> -->
 	</header>
 	<main id="main" class="">
-		<section class="cntr">
-			<div class="SwiperPositionParent">
-				<div class="swiper-container banner-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="images/main1_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main1_sp.jpg" alt="main_slide" class="sp">
-						</div>
-						<div class="swiper-slide">
-							<img src="images/main2_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main2_sp.jpg" alt="main_slide" class="sp">
-						</div>
-						<div class="swiper-slide">
-							<img src="images/main3_pc.jpg" alt="main_slide" class="pc">
-							<img src="images/main3_sp.jpg" alt="main_slide" class="sp">
+		<section class="cntr ">
+			<div class="SwiperPositionParent2">
+				<div class="SwiperPositionParent">
+					<div class="swiper-container banner-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide img1">
+								<!-- <img src="images/main1_pc.jpg" alt="main_slide" class="pc">
+							<img src="images/main1_sp.jpg" alt="main_slide" class="sp"> -->
+							</div>
+							<div class="swiper-slide img2">
+								<!-- <img src="images/main2_pc.jpg" alt="main_slide" class="pc">
+							<img src="images/main2_sp.jpg" alt="main_slide" class="sp"> -->
+							</div>
+							<div class="swiper-slide img3">
+								<!-- <img src="images/main3_pc.jpg" alt="main_slide" class="pc">
+							<img src="images/main3_sp.jpg" alt="main_slide" class="sp"> -->
+							</div>
 						</div>
 					</div>
+					<div class="scroller">
+						<div class="img"></div>
+						<div class="text">scroll down</div>
+					</div>
 				</div>
-				<div class="scroller">
-					<div class="img"></div>
-					<div class="text">scroll down</div>
-				</div>
-			</div>
 			</div>
 		</section>
 		<script>
@@ -219,7 +220,7 @@
 		<section class="news cntr" id="news">
 			<div class="">
 				<h2>NEWS</h2>
-				<div class="cardCntr row">
+				<div class="cardCntr row row-wrap">
 					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
 						<div class="cardImg" style="background-image: url('./images/news/post_noimage.png');"></div>
 						<div class="cardBody">
@@ -365,7 +366,7 @@
 	<!-- Initialize Swiper -->
 	<script>
 		var swiper = new Swiper(".banner-swiper", {
-			spaceBetween: 30,
+			spaceBetween: 50,
 			centeredSlides: true,
 			autoplay: {
 				delay: 2500,

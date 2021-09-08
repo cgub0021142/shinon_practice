@@ -1,0 +1,12 @@
+.socialIcon {
+	// color: $primary-color;
+	display: flex;
+	margin: 0 -0.5em;
+	i {
+		margin: 0 0.25em;
+		&:hover {
+			opacity: 0.5;
+			// color: lighten(#8e3330, 20%)
+		}
+	}
+}

@@ -507,14 +507,53 @@ h2::after {
 }
 
 .row-wrap.row {
-	margin-left: 0 -10px;
-	margin-right: 0 -10px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 .row-wrap > [class*=col] {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
+.cntr {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+	.cntr-lg {
+		width: 990px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-lg-fluid {
+		width: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.cntr-md {
+		width: 691.2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-md-fluid {
+		width: 100%;
+	}
+}
+@media (max-width: 568px) {
+	.cntr-sm {
+		width: 511.2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-sm-fluid {
+		width: 100%;
+	}
+}
 @media (max-width: 1100px) {
 	.d-lg-block {
 		display: block;
@@ -632,14 +671,14 @@ h2::after {
 	display: none;
 }
 .navbar .socialIcon {
-	display: flex;
 	position: absolute;
-	right: 6%;
+	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
 @media (max-width: 768px) {
 	.navbar .socialIcon {
+		right: 6%;
 		top: unset;
 		bottom: 0;
 		transform: none;
@@ -673,9 +712,6 @@ h2::after {
 		position: static;
 		transform: none;
 		color: white;
-	}
-	.navbar.active .socialIcon > * + * {
-		margin-left: 0.5em;
 	}
 	.navbar.active nav {
 		flex-wrap: wrap;
@@ -770,6 +806,17 @@ h2::after {
 	padding: 2em;
 }
 /* navbar.scss end */
+.socialIcon {
+	display: flex;
+	margin: 0 -0.5em;
+}
+.socialIcon i {
+	margin: 0 0.25em;
+}
+.socialIcon i:hover {
+	opacity: 0.5;
+}
+
 .siteFooter {
 	background-color: #f8f8f8;
 }

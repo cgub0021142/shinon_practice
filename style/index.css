@@ -507,14 +507,53 @@ h2::after {
 }
 
 .row-wrap.row {
-	margin-left: 0 -10px;
-	margin-right: 0 -10px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 .row-wrap > [class*=col] {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
+.cntr {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+	.cntr-lg {
+		width: 990px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-lg-fluid {
+		width: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.cntr-md {
+		width: 691.2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-md-fluid {
+		width: 100%;
+	}
+}
+@media (max-width: 568px) {
+	.cntr-sm {
+		width: 511.2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cntr-sm-fluid {
+		width: 100%;
+	}
+}
 @media (max-width: 1100px) {
 	.d-lg-block {
 		display: block;
@@ -632,14 +671,14 @@ h2::after {
 	display: none;
 }
 .navbar .socialIcon {
-	display: flex;
 	position: absolute;
-	right: 6%;
+	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
 @media (max-width: 768px) {
 	.navbar .socialIcon {
+		right: 6%;
 		top: unset;
 		bottom: 0;
 		transform: none;
@@ -673,9 +712,6 @@ h2::after {
 		position: static;
 		transform: none;
 		color: white;
-	}
-	.navbar.active .socialIcon > * + * {
-		margin-left: 0.5em;
 	}
 	.navbar.active nav {
 		flex-wrap: wrap;
@@ -770,6 +806,17 @@ h2::after {
 	padding: 2em;
 }
 /* navbar.scss end */
+.socialIcon {
+	display: flex;
+	margin: 0 -0.5em;
+}
+.socialIcon i {
+	margin: 0 0.25em;
+}
+.socialIcon i:hover {
+	opacity: 0.5;
+}
+
 .siteFooter {
 	background-color: #f8f8f8;
 }
@@ -826,6 +873,38 @@ header .cntr {
 	}
 }
 
+.banner-swiper .swiper-slide {
+	background: center/100% 100% no-repeat;
+	aspect-ratio: 1920/1147;
+}
+.banner-swiper .swiper-slide.img1 {
+	background-image: url(../images/main1_pc.jpg);
+}
+@media (max-width: 568px) {
+	.banner-swiper .swiper-slide.img1 {
+		background-image: url(../images/main1_sp.jpg);
+		aspect-ratio: 650/950;
+	}
+}
+.banner-swiper .swiper-slide.img2 {
+	background-image: url(../images/main2_pc.jpg);
+}
+@media (max-width: 568px) {
+	.banner-swiper .swiper-slide.img2 {
+		background-image: url(../images/main2_sp.jpg);
+		aspect-ratio: 650/950;
+	}
+}
+.banner-swiper .swiper-slide.img3 {
+	background-image: url(../images/main3_pc.jpg);
+}
+@media (max-width: 568px) {
+	.banner-swiper .swiper-slide.img3 {
+		background-image: url(../images/main3_sp.jpg);
+		aspect-ratio: 650/950;
+	}
+}
+
 .scroller {
 	-ms-writing-mode: tb-lr;
 	    writing-mode: vertical-lr;
@@ -837,11 +916,6 @@ header .cntr {
 	right: 0;
 	width: 40px;
 	height: 12em;
-}
-@media (max-width: 568px) {
-	.scroller {
-		display: none;
-	}
 }
 .scroller .img {
 	background: url(../images/arrow.svg) left top/50% 130% no-repeat;
@@ -905,14 +979,8 @@ section.slogan svg {
 	margin-bottom: 128px;
 	overflow: hidden;
 }
-.news .cardCntr {
-	display: flex;
-	margin: 0 -15px 16px;
-	flex-wrap: wrap;
-}
-.news .cardCntr .card {
+.news .card {
 	box-sizing: border-box;
-	padding: 0 15px;
 	margin-bottom: 32px;
 }
 .news .cardImg {
@@ -920,7 +988,7 @@ section.slogan svg {
 	width: 300px;
 	width: 100%;
 	background: url("https://fakeimg.pl/300x200/ff3") center/cover no-repeat;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
 }
 .news .cardTitle {
 	margin-bottom: 8px;
@@ -1071,8 +1139,14 @@ section.slogan svg {
 	overflow: hidden;
 }
 @media (max-width: 768px) {
+	.shopInfoWrapper .shopCaption {
+		margin-top: 0;
+	}
+}
+@media (max-width: 768px) {
 	.shopInfoWrapper {
 		justify-content: space-between;
+		margin-bottom: 0;
 	}
 	.shopInfoWrapper h2 {
 		order: -2;
@@ -1094,7 +1168,6 @@ section.slogan svg {
 	width: 76px;
 	height: 110px;
 	text-align: center;
-	position: relative;
 }
 .shopInfoWrapper .content .logo:hover {
 	opacity: 0.75;
@@ -1112,26 +1185,13 @@ section.slogan svg {
 		text-align: center;
 	}
 }
-.shopInfoWrapper .content .shopAddr {
-	white-space: nowrap;
-	font-size: 0.875rem;
-	line-height: 1.5;
-}
 .shopInfoWrapper .content .shopInfoTable {
-	display: flex;
 	font-size: 0.875rem;
 	line-height: 1.5;
 	margin-bottom: 30px;
 }
 .shopInfoWrapper .content .socialIcon {
 	color: #8e3330;
-	display: flex;
-}
-.shopInfoWrapper .content .socialIcon i {
-	margin: 0 0.25em;
-}
-.shopInfoWrapper .content .socialIcon i:hover {
-	opacity: 0.5;
 }
 @media (max-width: 1100px) {
 	.shopInfoWrapper .content .shopInfoTable {
