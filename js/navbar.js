@@ -7,46 +7,49 @@ let top__when__scrolldown = 0
 let previousScrollTop = 0;
 let checkDistance = false;
 let timerID = null
+let timerForchecking = null
+let nowScrollTop = 0;
 document.addEventListener('scroll', function (e) {
 
 	let navbar = document.querySelector('header.navbar')
 
 	let windowH = window.innerHeight
-	console.log('H',windowH)
-	let nowScrollTop = document.querySelector('html').scrollTop
+	let scrollDownThreshold = windowH * .2;
+	nowScrollTop = document.querySelector('html').scrollTop
 	console.log('timerID:', timerID)
 	if (nowScrollTop >= previousScrollTop && !linkMoving) {
 		console.log('yes:')
 		if (!timerID) {
 			timerID = setInterval(() => {
-				console.log('nowScrollTop - top__when__scrolldown:', nowScrollTop - top__when__scrolldown)
-				console.log('windowH * .1:', windowH * .1)
-				if (nowScrollTop - top__when__scrolldown > windowH * .1)
+				console.log('nowScrollTop:', nowScrollTop)
+				if (nowScrollTop - top__when__scrolldown > scrollDownThreshold)
 					navbar.classList.add('collapse')
-			}, 100);
-			setTimeout(() => {
+			}, 300);
+			timerForchecking = setTimeout(() => {
 				clearInterval(timerID)
-			}, 2000);
+			}, 3000);
 		}
 	}
 	else {
 		console.log('no')
 		navbar.classList.remove('collapse')
 		if (timerID) {
-			clearTimeout(timerID)
+			clearInterval(timerID)
 			timerID = null
+			clearTimeout(timerForchecking)
+			timerForchecking = null
 		}
 	}
 
-	console.log('nowScrollTop:', nowScrollTop)
 	if (previousScrollTop > nowScrollTop){
 		top__when__scrolldown = nowScrollTop
 		previousScrollTop = nowScrollTop
 	}
 	else
-		previousScrollTop = nowScrollTop
-	console.log('previousScrollTop:', previousScrollTop)
-	console.log('top__when__scrolldown:', top__when__scrolldown)
+	previousScrollTop = nowScrollTop
+	// console.log('nowScrollTop:', nowScrollTop)
+	// console.log('previousScrollTop:', previousScrollTop)
+	// console.log('top__when__scrolldown:', top__when__scrolldown)
 }, { passive: true })
 document.querySelector('.hamburger').addEventListener('click', function () {
 	document.querySelector('header.navbar').classList.toggle('active');
