@@ -5,7 +5,6 @@ let transitionTime = 300
 // navbar collapse when you scroll down
 let top__when__scrolldown = 0
 let previousScrollTop = 0;
-let checkDistance = false;
 let timerID = null
 let timerForchecking = null
 let nowScrollTop = 0;
@@ -16,12 +15,9 @@ document.addEventListener('scroll', function (e) {
 	let windowH = window.innerHeight
 	let scrollDownThreshold = windowH * .2;
 	nowScrollTop = document.querySelector('html').scrollTop
-	console.log('timerID:', timerID)
 	if (nowScrollTop >= previousScrollTop && !linkMoving) {
-		console.log('yes:')
 		if (!timerID) {
 			timerID = setInterval(() => {
-				console.log('nowScrollTop:', nowScrollTop)
 				if (nowScrollTop - top__when__scrolldown > scrollDownThreshold)
 					navbar.classList.add('collapse')
 			}, 300);
@@ -31,7 +27,6 @@ document.addEventListener('scroll', function (e) {
 		}
 	}
 	else {
-		console.log('no')
 		navbar.classList.remove('collapse')
 		if (timerID) {
 			clearInterval(timerID)
@@ -47,9 +42,6 @@ document.addEventListener('scroll', function (e) {
 	}
 	else
 	previousScrollTop = nowScrollTop
-	// console.log('nowScrollTop:', nowScrollTop)
-	// console.log('previousScrollTop:', previousScrollTop)
-	// console.log('top__when__scrolldown:', top__when__scrolldown)
 }, { passive: true })
 document.querySelector('.hamburger').addEventListener('click', function () {
 	document.querySelector('header.navbar').classList.toggle('active');
