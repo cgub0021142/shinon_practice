@@ -44,10 +44,10 @@ h2::after {
 	border-bottom: 4px dashed #000;
 }
 
-* {
+/* *{
 	outline: 1px solid black;
 }
-
+ */
 /* base.scss end */
 .row {
 	display: flex;
@@ -668,7 +668,7 @@ h2::after {
 }
 .navbar .socialIcon {
 	position: absolute;
-	right: 0;
+	right: 40px;
 	top: 50%;
 	transform: translateY(-50%);
 }
