@@ -53,11 +53,12 @@
 			</picture>
 		</div>
 		<section class="news">
-			<!-- cooking menu information store -->
 			<header>
 				<h2>NEWS</h2>
 				<nav>
 					<ul class="navList">
+						<li class="navItem"><a class="navLink active" href="javascript:void(0);"
+								data-filter-type="ALL">ALL</a></li>
 						<li class="navItem"><a class="navLink" href="javascript:void(0);"
 								data-filter-type="foodCard">お料理のこと</a></li>
 						<li class="navItem"><a class="navLink" href="javascript:void(0);"
@@ -70,23 +71,50 @@
 				</nav>
 			</header>
 			<script>
-				//vanilla
-				document.querySelectorAll('.navLink').forEach(function (el, idx) {
+				//vanilla 改成複雜版，card依照多標籤，做顯示依據。
+				const sortingNav = document.querySelectorAll('.news .navLink');
+				let selection = []
+				function selectionUpdate() {
+					selection = []
+					sortingNav.forEach((el, idx) => {
+						if (idx !== 0) {
+							let key = el.dataset.filterType
+							if (el.classList.contains('active'))
+								selection.push(key);
+						}
+					})
+				}
+
+
+				sortingNav.forEach(function (el, idx) {
 					el.addEventListener('click', function () {
-						let cardType = this.dataset.filterType;
-						console.log(this.dataset)
-						console.log(cardType)
+						let cardShow = this.classList.toggle('active')
+
+						// let cardType = this.dataset.filterType;
 						let cards = document.querySelectorAll('.card')
-						cards.forEach(function (elt, idx) {
-							let typeMatch = elt.getElementsByClassName(cardType).length
-							if (typeMatch)
-								elt.classList.remove('card-hide')
-							else
-								elt.classList.add('card-hide')
-						})
+						if (this.innerText === 'ALL' && cardShow) {
+							cards.forEach(function (el, idx) {
+								el.classList.remove('card-hide')
+							})
+							sortingNav.forEach((el, idx) => {
+								if (idx !== 0)
+									el.classList.remove('active')
+							})
+						}
+						else {
+							selectionUpdate()
+							cards.forEach(el => {
+								if (selection.some(selected =>
+									el.getElementsByClassName(selected).length > 0))
+									el.classList.remove('card-hide')
+								else
+									el.classList.add('card-hide')
+							})
+							sortingNav[0].classList.remove('active')
+						}
 					})
 				})
-				//jq
+				//jq 簡單版
 				// let cardType;
 				// $('.navLink').click(function () {
 				// 	cardType = $(this).data('filterType')
@@ -111,99 +139,100 @@
 							<li class="cardListItem noticeCard">お知らせ</li>
 							<li class="cardListItem shopCard">お店のこと</li>
 						</ul>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12 carddd">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/8.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">秋の炊き込みご飯（土曜限定）</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.09.06</li>
-									<li class="cardListItem noticeCard">お知らせ</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/7.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">SHINONの梅仕事</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.08.18</li>
-									<li class="cardListItem foodCard">お料理のこと</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/6.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">SHINONのちりめん山椒</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.07.07</li>
-									<li class="cardListItem foodCard">お料理のこと</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/5.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">MENUの紹介（4）煮込み料理</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.28</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/4.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">MENUの紹介（3）キッシュ</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.28</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/3.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">MENUの紹介（2）SHINON特製ローストビーフ</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.28</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/2.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">MENUの紹介（1）SHINONセット</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.28</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(./images/news/foodPic/1.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">SHINONでテイクアウトできるもの</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.24</li>
-									<li class="cardListItem menuCard">メニューのこと</li>
-								</ul>
-							</div>
-						</a>
-						<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
-							<div class="cardImg" style="background-image: url(images/news/cover.jpg);"></div>
-							<div class="cardBody">
-								<h3 class="cardTitle">HPをリニューアルしました</h3>
-								<ul class="cardList">
-									<li class="cardListItem">2021.06.24</li>
-									<li class="cardListItem noticeCard">お知らせ</li>
-								</ul>
-							</div>
-						</a>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12 carddd">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/8.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">秋の炊き込みご飯（土曜限定）</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.09.06</li>
+								<li class="cardListItem noticeCard">お知らせ</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/7.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">SHINONの梅仕事</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.08.18</li>
+								<li class="cardListItem foodCard">お料理のこと</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/6.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">SHINONのちりめん山椒</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.07.07</li>
+								<li class="cardListItem foodCard">お料理のこと</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/5.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">MENUの紹介（4）煮込み料理</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.28</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/4.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">MENUの紹介（3）キッシュ</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.28</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/3.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">MENUの紹介（2）SHINON特製ローストビーフ</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.28</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/2.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">MENUの紹介（1）SHINONセット</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.28</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(./images/news/foodPic/1.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">SHINONでテイクアウトできるもの</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.24</li>
+								<li class="cardListItem menuCard">メニューのこと</li>
+							</ul>
+						</div>
+					</a>
+					<a href="news_detail.html" class="card col-4 col-md-6 col-sm-12">
+						<div class="cardImg" style="background-image: url(images/news/cover.jpg);"></div>
+						<div class="cardBody">
+							<h3 class="cardTitle">HPをリニューアルしました</h3>
+							<ul class="cardList">
+								<li class="cardListItem">2021.06.24</li>
+								<li class="cardListItem noticeCard">お知らせ</li>
+							</ul>
+						</div>
+					</a>
 				</div>
 			</main>
 		</section>
