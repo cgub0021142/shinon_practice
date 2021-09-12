@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/* 	outline: 1px solid black;
+	 */
 }
 
 a {
@@ -44,10 +46,6 @@ h2::after {
 	border-bottom: 4px dashed #000;
 }
 
-/* *{
-	outline: 1px solid black;
-}
- */
 /* base.scss end */
 .row {
 	display: flex;
@@ -843,20 +841,24 @@ section.news header {
 	align-items: center;
 	margin-bottom: 40px;
 }
-
 section.news .navList {
 	display: flex;
 	justify-content: flex-end;
 }
-
+section.news .navItem {
+	display: flex;
+}
 section.news .navItem::before {
 	content: "/";
 	margin: 0 10px;
 }
-
 section.news .navItem:first-of-type::before {
 	content: "";
 	margin: 0;
+}
+section.news .navLink.active {
+	transform: translateY(-0.35em);
+	font-weight: bolder;
 }
 
 .card {

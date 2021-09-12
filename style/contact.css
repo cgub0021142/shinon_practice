@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/* 	outline: 1px solid black;
+	 */
 }
 
 a {
@@ -44,10 +46,6 @@ h2::after {
 	border-bottom: 4px dashed #000;
 }
 
-/* *{
-	outline: 1px solid black;
-}
- */
 /* base.scss end */
 .row {
 	display: flex;
