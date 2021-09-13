@@ -977,10 +977,8 @@ section.slogan svg {
 	margin-bottom: 32px;
 }
 .news .cardImg {
-	aspect-ratio: 300/200;
-	width: 300px;
-	width: 100%;
-	background: url("https://fakeimg.pl/300x200/ff3") center/cover no-repeat;
+	padding-top: 66.6666666667%;
+	background: transparent center/cover no-repeat;
 	margin-bottom: 16px;
 }
 .news .cardTitle {
