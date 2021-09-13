@@ -868,7 +868,6 @@ header .cntr {
 
 .banner-swiper .swiper-slide {
 	background: center/100% 100% no-repeat;
-	padding-top: 59.7395833333%;
 }
 .banner-swiper .swiper-slide.img1 {
 	background-image: url(../images/main1_pc.jpg);
@@ -960,7 +959,6 @@ header .cntr {
 }
 section.slogan {
 	max-width: 200px;
-	padding-top: 100%;
 	margin: 0 auto 65px;
 }
 section.slogan svg {

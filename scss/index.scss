@@ -52,7 +52,7 @@ header .cntr {
 	.swiper-slide {
 		background: center / 100% 100% no-repeat;
 		// aspect-ratio: 1920/1147;
-		padding-top: 1147/1920 * 100%;
+		// padding-top: 1147/1920 * 100%;
 		@for $i from 1 to 4 {
 			&.img#{$i} {
 				background-image: url(../images/main#{$i}_pc.jpg);
@@ -115,7 +115,7 @@ header .cntr {
 section.slogan {
 	max-width: 200px;
 	// aspect-ratio: 1/1;
-	padding-top: 100%;
+	// padding-top: 100%;
 	margin: 0 auto 65px;
 	// background: url(../images/slogan.svg) no-repeat center/100%;
 	svg {
