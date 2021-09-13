@@ -860,6 +860,14 @@ section.news .navItem:first-of-type::before {
 	content: "";
 	margin: 0;
 }
+@media (max-width: 568px) {
+	section.news .navLink {
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+		word-break: break-all;
+	}
+}
 section.news .navLink.active {
 	/* transform: translateY(-.35em); */
 	margin-top: -0.45em;

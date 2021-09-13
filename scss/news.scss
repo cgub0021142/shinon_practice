@@ -32,7 +32,11 @@ section.news {
 		margin: 0;
 	}
 	.navLink {
-
+		@include phone{
+			// writing-mode: vertical-lr;
+			width: min-content;
+			word-break: break-all;
+		}
 		&.active {
 			/* transform: translateY(-.35em); */
 			margin-top: -0.45em;
