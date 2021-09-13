@@ -850,14 +850,16 @@ section.news .navItem {
 }
 section.news .navItem::before {
 	content: "/";
-	margin: 0 10px;
+	margin: 0 2ch;
 }
 section.news .navItem:first-of-type::before {
 	content: "";
 	margin: 0;
 }
 section.news .navLink.active {
-	transform: translateY(-0.35em);
+	/* transform: translateY(-.35em); */
+	margin-top: -0.45em;
+	padding-bottom: 0.45em;
 	font-weight: bolder;
 }
 
