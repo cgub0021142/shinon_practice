@@ -827,6 +827,10 @@ h2::after {
 	}
 }
 
+html {
+	overflow-y: scroll;
+}
+
 .banner {
 	margin-bottom: 56px;
 }
