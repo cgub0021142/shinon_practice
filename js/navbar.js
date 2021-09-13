@@ -1,6 +1,7 @@
 //在pc模式下，click link的時候，我不要讓navbar collapse，這邊宣告計數器
 let linkMoving = 0;
 let transitionTime = 300
+let collapseCheckingInterval = 100
 
 // navbar collapse when you scroll down
 let top__when__scrolldown = 0
@@ -20,7 +21,7 @@ document.addEventListener('scroll', function (e) {
 			timerID = setInterval(() => {
 				if (nowScrollTop - top__when__scrolldown > scrollDownThreshold)
 					navbar.classList.add('collapse')
-			}, 300);
+			}, collapseCheckingInterval);
 			timerForchecking = setTimeout(() => {
 				clearInterval(timerID)
 			}, 3000);
