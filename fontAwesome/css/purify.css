@@ -66,3 +66,6 @@
 .fa-envelope:before {
 	content: "\f0e0";
 }
+.fa-phone:before {
+	content: "\f095";
+}
