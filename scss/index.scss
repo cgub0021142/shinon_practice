@@ -14,7 +14,7 @@ header .cntr {
 	//padding 放在外面的cntr(.navbar)因為會轉成fixed
 }
 
-.ttt{
+.ttt {
 	min-width: 275px;
 }
 .SwiperPositionParent {
@@ -49,10 +49,10 @@ header .cntr {
 	}
 }
 .banner-swiper {
-
 	.swiper-slide {
 		background: center / 100% 100% no-repeat;
-		aspect-ratio: 1920/1147;
+		// aspect-ratio: 1920/1147;
+		padding-top: 1147/1920 * 100%;
 		@for $i from 1 to 4 {
 			&.img#{$i} {
 				background-image: url(../images/main#{$i}_pc.jpg);
@@ -60,7 +60,8 @@ header .cntr {
 			@include phone {
 				&.img#{$i} {
 					background-image: url(../images/main#{$i}_sp.jpg);
-					aspect-ratio: 650/950;
+					// aspect-ratio: 650/950;
+					padding-top: 95/65 * 100%;
 				}
 			}
 		}
@@ -113,7 +114,8 @@ header .cntr {
 }
 section.slogan {
 	max-width: 200px;
-	aspect-ratio: 1/1;
+	// aspect-ratio: 1/1;
+	padding-top: 100%;
 	margin: 0 auto 65px;
 	// background: url(../images/slogan.svg) no-repeat center/100%;
 	svg {
@@ -133,7 +135,7 @@ section.slogan {
 		// aspect-ratio: 300/200;
 		// width: 300px;
 		// width: 100%;
-		padding-top: (200%/3);
+		padding-top: 2/3 * 100%;
 		background: transparent center/cover no-repeat;
 		margin-bottom: 16px;
 	}
@@ -172,7 +174,8 @@ section.slogan {
 .conceptImg {
 	flex: 0 80%;
 	max-width: 860px;
-	aspect-ratio: 850/520;
+	// aspect-ratio: 850/520;
+	padding-top: 52/85 * 100%;
 	background: url("../images/conceptImg.png") center/cover no-repeat;
 	border-radius: 8px;
 }
@@ -244,7 +247,8 @@ section.slogan {
 			background: url("../images/conceptCap1.png") center / cover no-repeat;
 			border-radius: 8px;
 			overflow: hidden;
-			aspect-ratio: 4/3;
+			// aspect-ratio: 4/3;
+			padding-top: 3/4 * 100%;
 		}
 	}
 	.imagebox2 {
@@ -261,7 +265,8 @@ section.slogan {
 			background: url("../images/conceptCap2.png") center / cover no-repeat;
 			border-radius: 8px;
 			overflow: hidden;
-			aspect-ratio: 4/3;
+			// aspect-ratio: 4/3;
+			padding-top: 3/4 * 100%;
 		}
 	}
 }
@@ -287,9 +292,11 @@ section.slogan {
 		// width: 30%;
 	}
 	.shopCaption {
-		// width: 62.5%;
+		width: 62.5%;
 		// max-width: 650px;
-		aspect-ratio: 600/415;
+		// aspect-ratio: 600/415;
+		// // 這邊不能用paddint-top
+		// padding-top: 415/600 * 100%;
 		margin-top: $h2-size * -1.2 - 4;
 		overflow: hidden;
 		@include pad {
@@ -362,7 +369,8 @@ section.slogan {
 	@for $i from 1 through 4 {
 		.captionSlide.cap#{$i} {
 			background: url("../images/shopCaption#{$i}.png") center/cover no-repeat;
-			aspect-ratio: 65/45;
+			// aspect-ratio: 65/45;
+			padding-top: 45/65 * 100%;
 		}
 	}
 
@@ -396,6 +404,7 @@ section.slogan {
 	iframe {
 		width: 100%;
 		aspect-ratio: 2/1;
+		// padding-top: 50%;
 		margin-bottom: 72px;
 	}
 	p {

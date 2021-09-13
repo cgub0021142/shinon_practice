@@ -868,7 +868,7 @@ header .cntr {
 
 .banner-swiper .swiper-slide {
 	background: center/100% 100% no-repeat;
-	aspect-ratio: 1920/1147;
+	padding-top: 59.7395833333%;
 }
 .banner-swiper .swiper-slide.img1 {
 	background-image: url(../images/main1_pc.jpg);
@@ -876,7 +876,7 @@ header .cntr {
 @media (max-width: 568px) {
 	.banner-swiper .swiper-slide.img1 {
 		background-image: url(../images/main1_sp.jpg);
-		aspect-ratio: 650/950;
+		padding-top: 146.1538461538%;
 	}
 }
 .banner-swiper .swiper-slide.img2 {
@@ -885,7 +885,7 @@ header .cntr {
 @media (max-width: 568px) {
 	.banner-swiper .swiper-slide.img2 {
 		background-image: url(../images/main2_sp.jpg);
-		aspect-ratio: 650/950;
+		padding-top: 146.1538461538%;
 	}
 }
 .banner-swiper .swiper-slide.img3 {
@@ -894,7 +894,7 @@ header .cntr {
 @media (max-width: 568px) {
 	.banner-swiper .swiper-slide.img3 {
 		background-image: url(../images/main3_sp.jpg);
-		aspect-ratio: 650/950;
+		padding-top: 146.1538461538%;
 	}
 }
 
@@ -960,7 +960,7 @@ header .cntr {
 }
 section.slogan {
 	max-width: 200px;
-	aspect-ratio: 1/1;
+	padding-top: 100%;
 	margin: 0 auto 65px;
 }
 section.slogan svg {
@@ -1019,7 +1019,7 @@ section.slogan svg {
 .conceptImg {
 	flex: 0 80%;
 	max-width: 860px;
-	aspect-ratio: 850/520;
+	padding-top: 61.1764705882%;
 	background: url("../images/conceptImg.png") center/cover no-repeat;
 	border-radius: 8px;
 }
@@ -1085,7 +1085,7 @@ section.slogan svg {
 	background: url("../images/conceptCap1.png") center/cover no-repeat;
 	border-radius: 8px;
 	overflow: hidden;
-	aspect-ratio: 4/3;
+	padding-top: 75%;
 }
 .conceptBody .caption .imagebox2 {
 	position: absolute;
@@ -1104,7 +1104,7 @@ section.slogan svg {
 	background: url("../images/conceptCap2.png") center/cover no-repeat;
 	border-radius: 8px;
 	overflow: hidden;
-	aspect-ratio: 4/3;
+	padding-top: 75%;
 }
 
 /* shopInfo  */
@@ -1125,7 +1125,7 @@ section.slogan svg {
 	margin-bottom: 4rem;
 }
 .shopInfoWrapper .shopCaption {
-	aspect-ratio: 600/415;
+	width: 62.5%;
 	margin-top: -6.4rem;
 	overflow: hidden;
 }
@@ -1194,19 +1194,19 @@ section.slogan svg {
 
 .shopCaption .captionSlide.cap1 {
 	background: url("../images/shopCaption1.png") center/cover no-repeat;
-	aspect-ratio: 65/45;
+	padding-top: 69.2307692308%;
 }
 .shopCaption .captionSlide.cap2 {
 	background: url("../images/shopCaption2.png") center/cover no-repeat;
-	aspect-ratio: 65/45;
+	padding-top: 69.2307692308%;
 }
 .shopCaption .captionSlide.cap3 {
 	background: url("../images/shopCaption3.png") center/cover no-repeat;
-	aspect-ratio: 65/45;
+	padding-top: 69.2307692308%;
 }
 .shopCaption .captionSlide.cap4 {
 	background: url("../images/shopCaption4.png") center/cover no-repeat;
-	aspect-ratio: 65/45;
+	padding-top: 69.2307692308%;
 }
 .shopCaption .capPagination {
 	box-sizing: border-box;
