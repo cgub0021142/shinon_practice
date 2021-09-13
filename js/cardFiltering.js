@@ -13,7 +13,7 @@ function selectionUpdate() {
 }
 
 
-sortingNav.forEach(function (el, idx) {
+sortingNav.forEach(function (el) {
 	el.addEventListener('click', function () {
 		let cardShow = this.classList.toggle('active')
 
@@ -62,3 +62,11 @@ sortingNav.forEach(function (el, idx) {
 // 		})
 // 	}
 // })
+//如果從別的頁面按近來，也要讓頁面帶有filter 功能，目前想到最簡單的就是加在url上，或是用query
+document.addEventListener("DOMContentLoaded", function () {
+	// DOM Ready!
+	let querys = new URLSearchParams(document.location.search);
+	let filterType = querys.get('filter')
+	const mylink = document.querySelector(`[data-filter-type=${filterType}]`)
+	mylink.click()
+});

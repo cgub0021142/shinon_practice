@@ -848,14 +848,31 @@ h2::after {
 
 .aside {
 	flex: 0 18%;
-	order: 1;
 }
 
 .postPager {
 	flex: 0 100%;
-	order: 2;
 }
 
+@media (max-width: 768px) {
+	.title,
+.content,
+.aside {
+		flex: 0 100%;
+	}
+
+	.aside {
+		order: 1;
+	}
+
+	.postPager {
+		margin-bottom: 40px;
+	}
+
+	.title {
+		margin-bottom: 24px;
+	}
+}
 .cardTitle {
 	font-size: 24px;
 	margin: 16px 0;
@@ -895,18 +912,13 @@ h2::after {
 	margin-bottom: 16px;
 	font-weight: 700;
 }
-
-.aside ul {
+.aside nav {
 	margin-bottom: 40px;
 }
-
-.aside li {
+.aside a {
+	display: block;
 	margin: 8px 0;
-}
-
-.copyright {
-	text-align: center;
-	margin: 40px 0;
+	white-space: nowrap;
 }
 
 .postPager {
@@ -919,28 +931,4 @@ h2::after {
 .allPostLink img {
 	display: block;
 	margin: 0 auto 8px;
-}
-
-@media (max-width: 768px) {
-	body {
-		padding: 16px;
-	}
-
-	.title,
-.content,
-.aside {
-		flex: 0 100%;
-	}
-
-	.aside {
-		order: 3;
-	}
-
-	.postPager {
-		margin-bottom: 40px;
-	}
-
-	.title {
-		margin-bottom: 24px;
-	}
 }/*# sourceMappingURL=news_detail.css.map */
