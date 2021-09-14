@@ -1233,10 +1233,15 @@ section.slogan svg {
 		margin-right: auto;
 	}
 }
-.accessWrapper iframe {
+.accessWrapper .ratioBox {
+	position: relative;
+	padding-top: 50%;
+}
+.accessWrapper .ratioBox > * {
+	position: absolute;
+	inset: 0;
 	width: 100%;
-	aspect-ratio: 2/1;
-	margin-bottom: 72px;
+	height: 100%;
 }
 .accessWrapper p {
 	text-align: center;

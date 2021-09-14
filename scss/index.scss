@@ -401,11 +401,14 @@ section.slogan {
 			margin-right: auto;
 		}
 	}
+	.ratioBox{
+		@include aspectRatio(2,1)
+	}
 	iframe {
-		width: 100%;
-		aspect-ratio: 2/1;
-		// padding-top: 50%;
-		margin-bottom: 72px;
+		// width: 100%;
+		// aspect-ratio: 2/1;
+		// // padding-top: 50%;
+		// margin-bottom: 72px;
 	}
 	p {
 		text-align: center;
