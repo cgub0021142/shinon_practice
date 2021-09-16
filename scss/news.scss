@@ -54,8 +54,13 @@ section.news {
 }
 .cardImg {
 	padding-top: 66.5%;
-	background: center/ cover no-repeat;
+	background: center/ 100% no-repeat;	
 	margin-bottom: 20px;
+	transition: background-size .3s;
+	&:hover{
+		background-size: calc(100% - 20px);
+		transition: background-size .3s;
+	}
 }
 .cardTitle {
 	margin-bottom: 10px; 

@@ -885,8 +885,13 @@ section.news .navLink.active {
 
 .cardImg {
 	padding-top: 66.5%;
-	background: center/cover no-repeat;
+	background: center/100% no-repeat;
 	margin-bottom: 20px;
+	transition: background-size 0.3s;
+}
+.cardImg:hover {
+	background-size: calc(100% - 20px);
+	transition: background-size 0.3s;
 }
 
 .cardTitle {
