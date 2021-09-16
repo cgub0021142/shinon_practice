@@ -976,8 +976,13 @@ section.slogan svg {
 }
 .news .cardImg {
 	padding-top: 66.6666666667%;
-	background: transparent center/cover no-repeat;
+	background: center/100% no-repeat;
 	margin-bottom: 16px;
+	transition: background-size 0.3s;
+}
+.news .cardImg:hover {
+	background-size: calc(100% - 20px);
+	transition: background-size 0.3s;
 }
 .news .cardTitle {
 	margin-bottom: 8px;

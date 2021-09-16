@@ -136,8 +136,13 @@ section.slogan {
 		// width: 300px;
 		// width: 100%;
 		padding-top: 2/3 * 100%;
-		background: transparent center/cover no-repeat;
+		background: center/ 100% no-repeat;	
 		margin-bottom: 16px;
+		transition: background-size .3s;
+		&:hover{
+			background-size: calc(100% - 20px);
+			transition: background-size .3s;
+		}
 	}
 
 	.cardTitle {
